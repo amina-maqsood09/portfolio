@@ -1,0 +1,14 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "zepUxG859aAYN0_vZDIuZ"
+uri = "file://artifacts/portfolio/src/assets/project-calculator.png"
+type = "image"
+title = "JavaScript Calculator UI Dark Mode"
+
+[[generated]]
+id = "qjuAnD-jNZ40BcyMNMN1X"
+uri = "file://artifacts/portfolio/src/assets/project-gallery.png"
+type = "image"
+title = "Modern Image Gallery UI"

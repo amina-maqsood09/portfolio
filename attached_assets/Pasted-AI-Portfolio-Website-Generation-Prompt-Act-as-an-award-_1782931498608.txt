@@ -1,0 +1,114 @@
+AI Portfolio Website Generation Prompt
+
+Act as an award-winning UI/UX designer, senior full-stack web developer, and personal branding expert.
+
+I will provide my CV and my existing portfolio links. Your task is to analyze everything and create a modern, premium, responsive personal portfolio website that looks like it was designed by a top design agency.
+
+Inputs
+
+- CV: [Attach my CV]
+- Existing Portfolio: [Paste portfolio link]
+- LinkedIn: [Optional]
+- GitHub: [Optional]
+- Behance/Dribbble: [Optional]
+
+Your Tasks
+
+1. Carefully analyze my CV and portfolio.
+2. Extract all important information automatically.
+3. Rewrite all content professionally with excellent grammar.
+4. Improve project descriptions using strong action words.
+5. Organize everything into a clean portfolio structure.
+6. Remove duplicate or unnecessary information.
+7. Highlight my strongest skills and achievements.
+
+Website Requirements
+
+Create a premium, elegant, modern website with:
+
+- Minimalist design
+- Luxury look and feel
+- Smooth animations
+- Glassmorphism and subtle gradients
+- Beautiful typography
+- Responsive layout for mobile, tablet, and desktop
+- Fast loading speed
+- SEO optimization
+- Accessibility best practices
+- Dark mode and light mode
+- Professional color palette
+
+Website Sections
+
+- Hero Section
+- About Me
+- Skills
+- Experience
+- Education
+- Certifications
+- Featured Projects
+- Project Details
+- Services
+- Testimonials (if available)
+- Awards & Achievements
+- Contact Form
+- Social Media Links
+- Footer
+
+Project Cards
+
+For every project:
+
+- Beautiful thumbnail
+- Project description
+- Technologies used
+- Features
+- Challenges
+- Solutions
+- Live Demo button
+- GitHub button (if available)
+
+Animations
+
+Include:
+
+- Smooth scrolling
+- Fade-in animations
+- Hover effects
+- Animated buttons
+- Interactive cards
+- Scroll progress indicator
+- Loading animation
+- Micro-interactions
+
+Technical Requirements
+
+- HTML5
+- CSS3
+- Tailwind CSS
+- JavaScript / TypeScript
+- React + Next.js
+- Fully responsive
+- SEO optimized
+- Clean and maintainable code
+- Optimized images
+- Reusable components
+
+Design Inspiration
+
+The final result should have the quality of an award-winning portfolio similar to top designers and developers, with a clean, premium, modern, and memorable user experience.
+
+Final Deliverables
+
+Generate:
+
+1. Complete portfolio website.
+2. Improved professional content.
+3. Responsive design.
+4. Attractive UI/UX.
+5. SEO-ready pages.
+6. Contact form.
+7. Optimized performance.
+8. Production-ready code.
+
+Do not use placeholder text if information is available in my CV or portfolio. Automatically extract, improve, and organize all available information into a polished, professional portfolio website.
