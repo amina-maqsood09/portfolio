@@ -3,6 +3,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Mail, MapPin, Phone, Linkedin, Github, Send, CheckCircle, AlertCircle, Loader } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
+const EMAILJS_SERVICE_ID = "service_b8m026x";
+const EMAILJS_TEMPLATE_ID = "kss5ijx";
+const EMAILJS_PUBLIC_KEY = "zdt7U3xUzKIF-t8lP";
+
 type FormStatus = "idle" | "sending" | "success" | "error";
 
 export default function Contact() {
@@ -17,19 +21,9 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name || !form.email || !form.message) return;
-
-    const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-    const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
-    const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
-
-    if (!serviceId || !templateId || !publicKey) {
-      setStatus("error");
-      return;
-    }
-
     setStatus("sending");
     try {
-      await emailjs.sendForm(serviceId, templateId, formRef.current!, publicKey);
+      await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formRef.current!, EMAILJS_PUBLIC_KEY);
       setStatus("success");
       setForm({ name: "", email: "", subject: "", message: "" });
     } catch {
@@ -37,35 +31,39 @@ export default function Contact() {
     }
   };
 
+  const fadeUp = {
+    hidden: { opacity: 0, y: 24 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
+  };
+
   return (
-    <section id="contact" className="py-24 bg-muted/30 border-t border-border" data-testid="section-contact">
+    <section id="contact" className="py-28 bg-muted/30 border-t border-border" data-testid="section-contact">
       <div className="container mx-auto px-6 md:px-12">
-        <div className="max-w-4xl mx-auto text-center mb-16">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">Let's build something great.</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Whether you're a recruiter, a startup looking for a frontend developer, or someone with a project idea — I'd love to hear from you. Let's make something worth being proud of.
-            </p>
-          </motion.div>
-        </div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-80px" }}
+          variants={fadeUp}
+          className="max-w-4xl mx-auto text-center mb-16"
+        >
+          <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-3">Get in Touch</p>
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">Let's build something great.</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            Whether you're a recruiter, a startup looking for a frontend developer, or someone with a project idea — I'd love to hear from you. Let's make something worth being proud of.
+          </p>
+        </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-          {/* Contact Info */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-60px" }}
+            variants={{ hidden: { opacity: 0, x: -24 }, visible: { opacity: 1, x: 0, transition: { duration: 0.55 } } }}
             className="space-y-4"
           >
             <a
               href="mailto:amnamaqsood931@gmail.com"
-              className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border hover:border-primary transition-colors group"
+              className="flex items-center gap-4 p-4 rounded-xl bg-card border border-border hover:border-primary hover:shadow-md transition-all duration-300 group"
               data-testid="link-email"
             >
               <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform flex-shrink-0">
@@ -102,7 +100,7 @@ export default function Contact() {
                 href="https://linkedin.com/in/amina-maqsood09"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center text-foreground hover:bg-primary hover:text-white hover:border-primary transition-all"
+                className="w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center text-foreground hover:bg-primary hover:text-white hover:border-primary transition-all duration-300"
                 data-testid="link-linkedin"
               >
                 <Linkedin size={20} />
@@ -111,41 +109,49 @@ export default function Contact() {
                 href="https://github.com/amina-maqsood09"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center text-foreground hover:bg-primary hover:text-white hover:border-primary transition-all"
+                className="w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center text-foreground hover:bg-primary hover:text-white hover:border-primary transition-all duration-300"
                 data-testid="link-github"
               >
                 <Github size={20} />
               </a>
             </div>
 
-            <div className="p-4 rounded-xl bg-primary/5 border border-primary/20 mt-2">
+            <div className="p-4 rounded-xl bg-primary/5 border border-primary/20">
               <p className="text-sm text-muted-foreground leading-relaxed">
                 <span className="text-primary font-semibold">Response time:</span> I typically reply within 24 hours. For urgent matters, reach me directly by email or phone.
               </p>
             </div>
           </motion.div>
 
-          {/* Form */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-60px" }}
+            variants={{ hidden: { opacity: 0, x: 24 }, visible: { opacity: 1, x: 0, transition: { duration: 0.55 } } }}
             className="glass-card p-6 md:p-8 rounded-2xl"
           >
             <AnimatePresence mode="wait">
               {status === "success" ? (
                 <motion.div
                   key="success"
-                  initial={{ opacity: 0, scale: 0.95 }}
+                  initial={{ opacity: 0, scale: 0.93 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0 }}
+                  transition={{ duration: 0.35 }}
                   className="h-full flex flex-col items-center justify-center text-center py-12 gap-4"
                   data-testid="form-success"
                 >
-                  <CheckCircle size={52} className="text-emerald-500" />
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    transition={{ type: "spring", stiffness: 200, delay: 0.1 }}
+                  >
+                    <CheckCircle size={56} className="text-emerald-500" />
+                  </motion.div>
                   <h3 className="text-2xl font-display font-bold">Message sent!</h3>
-                  <p className="text-muted-foreground max-w-xs">Thank you for reaching out. I'll get back to you within 24 hours.</p>
+                  <p className="text-muted-foreground max-w-xs">
+                    Message sent successfully! I'll get back to you soon.
+                  </p>
                   <button
                     onClick={() => setStatus("idle")}
                     className="mt-4 text-sm font-medium text-primary hover:underline"

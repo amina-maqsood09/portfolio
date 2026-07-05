@@ -1,72 +1,110 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { MapPin, Calendar } from "lucide-react";
+
+const experiences = [
+  {
+    role: "Frontend Developer Intern",
+    company: "FlyRank AI",
+    period: "Jul 2026 – Present",
+    location: "Remote",
+    description:
+      "Building AI-powered frontend projects as part of the core engineering team. Developing highly interactive UI components and integrating seamless AI features into modern web applications.",
+    tags: ["React", "AI Integration", "UI/UX"],
+    current: true,
+    accent: "from-violet-500 to-purple-500",
+  },
+  {
+    role: "Frontend Development Intern",
+    company: "CodeAlpha",
+    period: "Jun 2026 – Jul 2026",
+    location: "Remote",
+    description:
+      "Delivered multiple production-ready frontend projects: a JavaScript Calculator with chained operations and keyboard support, a CSS Grid Image Gallery with lightbox and filtering, and a portfolio website with scroll animations live on GitHub Pages.",
+    tags: ["JavaScript", "CSS Grid", "HTML5", "Animations"],
+    current: false,
+    accent: "from-cyan-500 to-teal-500",
+  },
+];
 
 export default function Experience() {
-  const experiences = [
-    {
-      role: "Frontend Developer Intern",
-      company: "FlyRank AI",
-      period: "Jul 2026 – Present",
-      location: "Remote",
-      description: "Building AI-powered frontend projects as part of the core engineering team. Developing highly interactive UI components and integrating seamless AI features into modern web applications.",
-      tags: ["React", "AI Integration", "UI/UX"]
-    },
-    {
-      role: "Frontend Development Intern",
-      company: "CodeAlpha",
-      period: "Jun 2026 – Jul 2026",
-      location: "Remote",
-      description: "Delivered multiple production-ready frontend projects including a complex JavaScript Calculator with chained operations, a responsive CSS Grid Image Gallery, and a personal portfolio website with scroll animations.",
-      tags: ["JavaScript", "CSS Grid", "HTML5", "Animations"]
-    }
-  ];
-
   return (
-    <section id="experience" className="py-24 relative" data-testid="section-experience">
+    <section id="experience" className="py-28 relative" data-testid="section-experience">
       <div className="container mx-auto px-6 md:px-12">
-        <h2 className="text-4xl md:text-5xl font-display font-bold mb-16">Experience</h2>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-80px" }}
+          transition={{ duration: 0.5 }}
+          className="mb-16"
+        >
+          <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-3">Work History</p>
+          <h2 className="text-4xl md:text-5xl font-display font-bold">Experience</h2>
+        </motion.div>
 
         <div className="max-w-4xl relative">
           {/* Timeline line */}
-          <div className="absolute left-0 md:left-8 top-0 bottom-0 w-px bg-border" />
+          <div className="absolute left-4 md:left-9 top-3 bottom-3 w-px bg-gradient-to-b from-primary via-border to-transparent" />
 
-          <div className="space-y-12">
+          <div className="space-y-10">
             {experiences.map((exp, idx) => (
-              <motion.div 
+              <motion.div
                 key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="relative pl-8 md:pl-24"
+                initial={{ opacity: 0, x: -24 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: "-80px" }}
+                transition={{ duration: 0.55, delay: idx * 0.12 }}
+                className="relative pl-12 md:pl-24"
               >
                 {/* Timeline dot */}
-                <div className="absolute left-[-4px] md:left-[28px] top-2 w-2 h-2 rounded-full bg-primary ring-4 ring-background" />
+                <div className={`absolute left-1.5 md:left-6 top-6 w-5 h-5 rounded-full bg-gradient-to-br ${exp.accent} ring-4 ring-background flex-shrink-0 shadow-lg`} />
 
-                <div className="glass-card p-6 md:p-8 rounded-2xl">
-                  <div className="flex flex-col md:flex-row md:items-start justify-between mb-4 gap-4">
+                <motion.div
+                  whileHover={{ y: -3 }}
+                  transition={{ type: "spring", stiffness: 280, damping: 22 }}
+                  className="glass-card p-7 md:p-8 rounded-2xl hover:shadow-xl hover:shadow-black/10 transition-shadow duration-300"
+                >
+                  {/* Header */}
+                  <div className="flex flex-col md:flex-row md:items-start justify-between gap-3 mb-5">
                     <div>
-                      <h3 className="text-2xl font-display font-bold text-foreground">{exp.role}</h3>
-                      <p className="text-lg text-primary font-medium">{exp.company}</p>
+                      <div className="flex items-center gap-2 flex-wrap mb-1">
+                        <h3 className="text-xl font-display font-bold text-foreground">{exp.role}</h3>
+                        {exp.current && (
+                          <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-primary/15 text-primary border border-primary/20">
+                            Current
+                          </span>
+                        )}
+                      </div>
+                      <p className={`text-base font-semibold bg-gradient-to-r ${exp.accent} bg-clip-text text-transparent`}>
+                        {exp.company}
+                      </p>
                     </div>
-                    <div className="text-left md:text-right">
-                      <p className="font-mono text-sm text-muted-foreground">{exp.period}</p>
-                      <p className="text-sm text-muted-foreground">{exp.location}</p>
+                    <div className="flex flex-col gap-1 text-sm text-muted-foreground md:text-right">
+                      <span className="flex items-center gap-1.5 md:justify-end">
+                        <Calendar size={13} />
+                        {exp.period}
+                      </span>
+                      <span className="flex items-center gap-1.5 md:justify-end">
+                        <MapPin size={13} />
+                        {exp.location}
+                      </span>
                     </div>
                   </div>
-                  
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    {exp.description}
-                  </p>
-                  
+
+                  <p className="text-muted-foreground leading-relaxed mb-6 text-[15px]">{exp.description}</p>
+
                   <div className="flex flex-wrap gap-2">
-                    {exp.tags.map(tag => (
-                      <span key={tag} className="text-xs font-medium px-2.5 py-1 bg-muted text-muted-foreground rounded-md">
+                    {exp.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="text-xs font-medium px-2.5 py-1 bg-muted text-muted-foreground rounded-md"
+                      >
                         {tag}
                       </span>
                     ))}
                   </div>
-                </div>
+                </motion.div>
               </motion.div>
             ))}
           </div>
