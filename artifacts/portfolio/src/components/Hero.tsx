@@ -46,7 +46,7 @@ export default function Hero() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
             </span>
-            Available for Internships
+            Open for Internships & Freelance Work
           </motion.div>
 
           <motion.h1 

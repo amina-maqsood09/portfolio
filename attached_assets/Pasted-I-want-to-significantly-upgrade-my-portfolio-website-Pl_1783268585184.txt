@@ -1,0 +1,28 @@
+I want to significantly upgrade my portfolio website. Please make the following changes:
+
+1. DESIGN IMPROVEMENTS
+- Give the site a more unique, modern visual identity — avoid generic AI-generated look. Use a distinctive color palette, better typography pairing, and more creative layout choices (asymmetric grids, unique section transitions).
+- Add subtle micro-interactions and hover effects throughout.
+- Improve visual hierarchy so key achievements stand out more.
+
+2. UPDATE POSITIONING — ADD FREELANCE FOCUS
+Currently the site only mentions "looking for internships." I also want to attract freelance clients. Please:
+- Update the hero section tagline to reflect both: "Frontend Developer | Open for Internships & Freelance Projects"
+- Add a new "Services" section listing what I can build for clients: Responsive websites, Landing pages, Portfolio websites, Frontend for web apps, UI component development
+- Update the Contact section intro text to welcome both recruiters and potential clients
+
+3. FIX THE CONTACT FORM (CRITICAL)
+The current contact form does not actually send messages anywhere — it's just a UI with no backend function. Please integrate a real working solution using EmailJS (free, works with static/frontend-only sites) so that when someone submits the form, I actually receive their message at my email: amnamaqsood931@gmail.com. Add clear success/error feedback after submission (e.g., "Message sent!" or "Something went wrong, please try again").
+
+4. ADD MORE PROJECTS
+Add these additional projects to the Projects section, matching the existing card style:
+- "University Complaint Management System" — Java, OOP, SQL, GUI — Desktop app for managing student complaints with GUI interface and SQL backend
+- "NETSOL Technologies Enterprise Network" — Cisco Packet Tracer, OSPF, VLANs — 3-layer hierarchical network design with 7 VLANs, OSPF routing, DHCP/DNS, and ASA 5505 firewall
+(Keep the existing projects too — just adding to the collection)
+
+5. GENERAL
+- Make sure the whole site remains fully responsive on mobile
+- Keep the dark/light mode toggle working across all new sections
+- Keep it clean and professional — not overly cluttered
+
+Please implement all of this and let me know once it's done so I can review.
