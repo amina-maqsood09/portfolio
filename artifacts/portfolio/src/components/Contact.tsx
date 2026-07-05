@@ -23,7 +23,7 @@ export default function Contact() {
     if (!form.name || !form.email || !form.message) return;
     setStatus("sending");
     try {
-      await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formRef.current!, EMAILJS_PUBLIC_KEY);
+      await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, formRef.current!);
       setStatus("success");
       setForm({ name: "", email: "", subject: "", message: "" });
     } catch {
