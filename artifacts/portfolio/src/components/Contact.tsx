@@ -4,7 +4,7 @@ import { Mail, MapPin, Phone, Linkedin, Github, Send, CheckCircle, AlertCircle, 
 import emailjs from "@emailjs/browser";
 
 const EMAILJS_SERVICE_ID = "service_b8m026x";
-const EMAILJS_TEMPLATE_ID = "kss5ijx";
+const EMAILJS_TEMPLATE_ID = "template_eoqv3r6";
 const EMAILJS_PUBLIC_KEY = "zdt7U3xUzKIF-t8lP";
 
 type FormStatus = "idle" | "sending" | "success" | "error";
