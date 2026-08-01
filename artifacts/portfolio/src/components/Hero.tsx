@@ -26,7 +26,7 @@ function FloatingOrbSlow({ className }: { className: string }) {
 function GridLines() {
   return (
     <div
-      className="absolute inset-0 pointer-events-none opacity-[0.025] dark:opacity-[0.035]"
+      className="absolute inset-0 pointer-events-none opacity-[0.025] dark:opacity-[0.04]"
       style={{
         backgroundImage:
           "linear-gradient(hsl(var(--foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)",
@@ -55,10 +55,10 @@ export default function Hero() {
     >
       <GridLines />
 
-      {/* Gold-tinted orbs for champagne warmth */}
-      <FloatingOrb className="top-[12%] left-[8%] w-[400px] h-[400px] bg-amber-400/8 dark:bg-amber-500/10 blur-[100px]" />
-      <FloatingOrbSlow className="bottom-[15%] right-[6%] w-[340px] h-[340px] bg-yellow-300/6 dark:bg-yellow-400/8 blur-[90px]" />
-      <FloatingOrb className="top-[55%] left-[45%] w-[240px] h-[240px] bg-amber-300/5 dark:bg-amber-400/6 blur-[80px]" />
+      {/* Blue-tinted ambient orbs */}
+      <FloatingOrb className="top-[12%] left-[8%] w-[400px] h-[400px] bg-blue-600/8 dark:bg-blue-500/10 blur-[110px]" />
+      <FloatingOrbSlow className="bottom-[15%] right-[6%] w-[340px] h-[340px] bg-blue-400/6 dark:bg-blue-500/8 blur-[100px]" />
+      <FloatingOrb className="top-[55%] left-[45%] w-[240px] h-[240px] bg-blue-500/4 dark:bg-blue-600/6 blur-[80px]" />
 
       <div className="absolute inset-0 pointer-events-none bg-radial-[at_50%_0%] from-transparent to-background/60" />
 
@@ -88,13 +88,13 @@ export default function Hero() {
             {/* Headline */}
             <motion.h1
               variants={itemVariants}
-              className="text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.08] tracking-tight mb-6"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.08] tracking-tight mb-6"
             >
               Hi, I'm Amina.
               <br />
               <span
                 className="text-transparent bg-clip-text"
-                style={{ backgroundImage: "linear-gradient(135deg, #C9A66B 0%, #E8C88A 45%, #A8854A 100%)" }}
+                style={{ backgroundImage: "linear-gradient(135deg, #1D4ED8 0%, #3B82F6 50%, #60A5FA 100%)" }}
               >
                 Frontend Developer
               </span>
@@ -103,18 +103,18 @@ export default function Hero() {
             {/* Sub */}
             <motion.p
               variants={itemVariants}
-              className="text-lg md:text-xl text-muted-foreground max-w-xl mb-10 leading-relaxed"
+              className="text-base md:text-xl text-muted-foreground max-w-xl mb-10 leading-relaxed"
             >
               A 3rd-year Software Engineering student at COMSATS University, building pixel-perfect interfaces and exploring the intersection of AI and frontend engineering.
             </motion.p>
 
             {/* CTAs — two balanced buttons */}
-            <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-4 mb-14">
+            <motion.div variants={itemVariants} className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 mb-14">
               <motion.a
                 href="#projects"
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
-                className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-7 py-3.5 rounded-lg font-semibold shadow-lg shadow-primary/20 hover:shadow-primary/35 hover:brightness-110 transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-7 py-3.5 rounded-lg font-semibold shadow-lg shadow-primary/25 hover:shadow-primary/40 hover:brightness-110 transition-all duration-300"
                 data-testid="btn-view-projects"
               >
                 View Projects <ArrowRight size={18} />
@@ -124,7 +124,7 @@ export default function Hero() {
                 href="#contact"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                className="inline-flex items-center justify-center gap-2 bg-transparent text-foreground border border-border px-7 py-3.5 rounded-lg font-semibold hover:bg-muted hover:border-primary/50 transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 bg-transparent text-foreground border border-foreground/30 px-7 py-3.5 rounded-lg font-semibold hover:border-primary hover:text-primary transition-all duration-300"
                 data-testid="btn-contact"
               >
                 Get in Touch <Mail size={18} />
@@ -157,7 +157,7 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* ── RIGHT: Illustration ── */}
+          {/* ── RIGHT: Illustration (desktop) ── */}
           <motion.div
             initial={{ opacity: 0, x: 40 }}
             animate={{ opacity: 1, x: 0 }}
@@ -173,7 +173,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.5 }}
-          className="lg:hidden relative h-[300px] mt-12"
+          className="lg:hidden relative h-[260px] mt-10"
         >
           <HeroIllustration />
         </motion.div>

@@ -12,7 +12,6 @@ const experiences = [
       "Building AI-powered frontend features and interactive UI components as part of the core engineering team, integrating intelligent capabilities into modern web applications.",
     tags: ["React", "AI Integration", "UI/UX"],
     current: true,
-    accent: "from-violet-500 to-purple-500",
   },
   {
     role: "Frontend Development Intern",
@@ -23,13 +22,12 @@ const experiences = [
       "Delivered multiple production-ready frontend projects: a JavaScript Calculator with chained operations and keyboard support, a CSS Grid Image Gallery with lightbox and filtering, and a portfolio website with scroll animations live on GitHub Pages.",
     tags: ["JavaScript", "CSS Grid", "HTML5", "Animations"],
     current: false,
-    accent: "from-cyan-500 to-teal-500",
   },
 ];
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-28 relative" data-testid="section-experience">
+    <section id="experience" className="py-24 md:py-28 relative" data-testid="section-experience">
       <div className="container mx-auto px-6 md:px-12">
 
         <motion.div
@@ -57,13 +55,13 @@ export default function Experience() {
                 transition={{ duration: 0.55, delay: idx * 0.12 }}
                 className="relative pl-12 md:pl-24"
               >
-                {/* Timeline dot */}
-                <div className={`absolute left-1.5 md:left-6 top-6 w-5 h-5 rounded-full bg-gradient-to-br ${exp.accent} ring-4 ring-background flex-shrink-0 shadow-lg`} />
+                {/* Timeline dot — solid blue */}
+                <div className="absolute left-1.5 md:left-6 top-6 w-5 h-5 rounded-full bg-primary ring-4 ring-background flex-shrink-0 shadow-lg shadow-primary/30" />
 
                 <motion.div
                   whileHover={{ y: -3 }}
                   transition={{ type: "spring", stiffness: 280, damping: 22 }}
-                  className="glass-card p-7 md:p-8 rounded-2xl hover:shadow-xl hover:shadow-black/10 transition-shadow duration-300"
+                  className="glass-card p-6 md:p-8 rounded-2xl hover:shadow-xl hover:shadow-primary/10 hover:border-primary/30 transition-all duration-300"
                 >
                   {/* Header */}
                   <div className="flex flex-col md:flex-row md:items-start justify-between gap-3 mb-5">
@@ -71,12 +69,12 @@ export default function Experience() {
                       <div className="flex items-center gap-2 flex-wrap mb-1">
                         <h3 className="text-xl font-display font-bold text-foreground">{exp.role}</h3>
                         {exp.current && (
-                          <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-primary/15 text-primary border border-primary/20">
+                          <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-primary/15 text-primary border border-primary/25">
                             Current
                           </span>
                         )}
                       </div>
-                      <p className={`text-base font-semibold bg-gradient-to-r ${exp.accent} bg-clip-text text-transparent`}>
+                      <p className="text-base font-semibold text-primary">
                         {exp.company}
                       </p>
                     </div>

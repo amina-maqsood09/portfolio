@@ -1,0 +1,28 @@
+I want to revise the color palette, fix the profile photo quality, and ensure full mobile responsiveness.
+
+1. NEW COLOR PALETTE — "Monochrome + Electric Blue"
+Replace the current charcoal/gold palette with this new one across the entire site:
+- Base colors: pure black (#0A0A0A) for dark elements/text, white (#FFFFFF) and very light grey (#F7F7F8) for backgrounds
+- Single strong accent: electric blue (#2563EB or #3B82F6) — use this consistently for buttons, links, gradient text highlights, active nav underline, timeline dots, icons, and card hover borders
+- Do NOT introduce a second accent color — keep it strictly black/white/grey + one blue, so it stays clean and high-end, not busy
+- Buttons: primary button = solid electric blue background with white text; secondary button = black outline with black text (or white outline with white text in dark mode)
+- Update both light and dark mode to follow this same logic
+- This should look like a premium tech/SaaS portfolio — think Linear, Vercel, Stripe-style clean minimal design with one confident accent color, not multiple pastel colors
+
+2. FIX PROFILE PHOTO QUALITY IN ABOUT SECTION
+The current photo looks blurry/pixelated because it's being stretched beyond its actual resolution. Please fix this:
+- Do NOT upscale or stretch the image beyond its native resolution
+- Set the image container to a fixed reasonable size (e.g. max-width 320-360px) with object-fit: cover, so it displays sharp
+- Add proper image-rendering and ensure no unnecessary CSS blur/filter is applied
+- If the current uploaded image file is low resolution, let me know so I can upload a higher-quality version
+
+3. FULL MOBILE RESPONSIVENESS CHECK
+Go through every section (Hero, About, Experience, Projects, Services, Skills, Education, Contact) and verify/fix mobile layout (viewport width ~375-430px):
+- Hero: buttons should stack vertically or wrap properly, code-editor visual element should either resize down significantly or hide on small screens if it breaks layout
+- About: photo and text should stack vertically (photo on top, text below) on mobile, not overlap or shrink awkwardly
+- Cards (Projects, Skills, Certifications): should switch to single-column layout on mobile with proper padding
+- Navbar: should collapse into a hamburger/mobile menu if it doesn't already
+- Check font sizes scale down appropriately so nothing overflows horizontally
+- Test at common breakpoints: 375px (small phones), 390px (iPhone), 428px (large phones)
+
+Please show me the Hero and About section first with the new color palette before applying it to the rest of the site.

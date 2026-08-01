@@ -7,41 +7,26 @@ const services = [
     icon: <Globe size={28} />,
     title: "Responsive Websites",
     description: "Pixel-perfect, mobile-first websites that look and perform great on every screen size and device.",
-    accent: "from-violet-500/20 to-purple-500/10",
-    border: "hover:border-violet-500/40",
-    iconColor: "text-violet-400",
   },
   {
     icon: <Layout size={28} />,
     title: "Landing Pages",
     description: "High-converting landing pages with clean design, fast load times, and compelling calls to action.",
-    accent: "from-cyan-500/20 to-teal-500/10",
-    border: "hover:border-cyan-500/40",
-    iconColor: "text-cyan-400",
   },
   {
     icon: <User size={28} />,
     title: "Portfolio Websites",
     description: "Distinctive personal portfolios that showcase your work, tell your story, and make a lasting impression.",
-    accent: "from-emerald-500/20 to-green-500/10",
-    border: "hover:border-emerald-500/40",
-    iconColor: "text-emerald-400",
   },
   {
     icon: <Layers size={28} />,
     title: "Frontend for Web Apps",
     description: "Clean, maintainable React frontends integrated with APIs, built with performance and scalability in mind.",
-    accent: "from-orange-500/20 to-amber-500/10",
-    border: "hover:border-orange-500/40",
-    iconColor: "text-orange-400",
   },
   {
     icon: <Component size={28} />,
     title: "UI Component Development",
     description: "Reusable, accessible UI components built with Tailwind CSS that slot into your existing design system.",
-    accent: "from-pink-500/20 to-rose-500/10",
-    border: "hover:border-pink-500/40",
-    iconColor: "text-pink-400",
   },
 ];
 
@@ -56,6 +41,7 @@ export default function Services() {
           transition={{ duration: 0.5 }}
           className="mb-16"
         >
+          <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-3">Services</p>
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">What I Build</h2>
           <p className="text-muted-foreground max-w-2xl text-lg">
             Whether you're a startup, a small business, or an individual — I can help you build a clean, modern web presence that works.
@@ -71,10 +57,13 @@ export default function Services() {
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.45, delay: idx * 0.08 }}
               whileHover={{ y: -4 }}
-              className={`relative p-7 rounded-2xl bg-gradient-to-br ${service.accent} border border-border ${service.border} transition-all duration-300 group cursor-default`}
+              className="relative p-7 rounded-2xl bg-card border border-border hover:border-primary/40 hover:shadow-lg hover:shadow-primary/8 transition-all duration-300 group cursor-default"
               data-testid={`card-service-${idx}`}
             >
-              <div className={`mb-5 ${service.iconColor} transition-transform duration-300 group-hover:scale-110 w-fit`}>
+              {/* Blue top accent line on hover */}
+              <div className="absolute top-0 left-6 right-6 h-[2px] rounded-full bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+
+              <div className="mb-5 text-primary transition-transform duration-300 group-hover:scale-110 w-fit">
                 {service.icon}
               </div>
               <h3 className="text-xl font-display font-bold mb-3">{service.title}</h3>
@@ -90,7 +79,7 @@ export default function Services() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.45, delay: services.length * 0.08 }}
             whileHover={{ y: -4 }}
-            className="relative p-7 rounded-2xl border border-dashed border-primary/40 hover:border-primary transition-all duration-300 flex flex-col items-start justify-between group"
+            className="relative p-7 rounded-2xl border border-dashed border-primary/40 hover:border-primary hover:bg-primary/5 transition-all duration-300 flex flex-col items-start justify-between group"
             data-testid="card-service-cta"
           >
             <div>

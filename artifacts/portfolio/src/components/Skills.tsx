@@ -7,18 +7,12 @@ type Skill = { name: string; level: number };
 const skillCategories: {
   title: string;
   icon: React.ReactNode;
-  color: string;
-  bg: string;
-  barColor: string;
   proficiency: number;
   skills: Skill[];
 }[] = [
   {
     title: "Languages",
     icon: <Code2 className="w-5 h-5" />,
-    color: "text-violet-400",
-    bg: "bg-violet-500/10",
-    barColor: "from-violet-500 to-purple-400",
     proficiency: 82,
     skills: [
       { name: "JavaScript", level: 90 },
@@ -33,9 +27,6 @@ const skillCategories: {
   {
     title: "Web Technologies",
     icon: <Layout className="w-5 h-5" />,
-    color: "text-cyan-400",
-    bg: "bg-cyan-500/10",
-    barColor: "from-cyan-500 to-teal-400",
     proficiency: 85,
     skills: [
       { name: "React.js", level: 88 },
@@ -48,9 +39,6 @@ const skillCategories: {
   {
     title: "Data & Analytics",
     icon: <Database className="w-5 h-5" />,
-    color: "text-emerald-400",
-    bg: "bg-emerald-500/10",
-    barColor: "from-emerald-500 to-green-400",
     proficiency: 68,
     skills: [
       { name: "SQL", level: 75 },
@@ -63,9 +51,6 @@ const skillCategories: {
   {
     title: "Security & Networking",
     icon: <Shield className="w-5 h-5" />,
-    color: "text-orange-400",
-    bg: "bg-orange-500/10",
-    barColor: "from-orange-500 to-amber-400",
     proficiency: 62,
     skills: [
       { name: "AES-256", level: 70 },
@@ -78,9 +63,6 @@ const skillCategories: {
   {
     title: "Developer Tools",
     icon: <Wrench className="w-5 h-5" />,
-    color: "text-pink-400",
-    bg: "bg-pink-500/10",
-    barColor: "from-pink-500 to-rose-400",
     proficiency: 78,
     skills: [
       { name: "Git", level: 85 },
@@ -93,9 +75,6 @@ const skillCategories: {
   {
     title: "Soft Skills",
     icon: <Users className="w-5 h-5" />,
-    color: "text-yellow-400",
-    bg: "bg-yellow-500/10",
-    barColor: "from-yellow-500 to-amber-400",
     proficiency: 90,
     skills: [
       { name: "Problem Solving", level: 92 },
@@ -106,11 +85,11 @@ const skillCategories: {
   },
 ];
 
-function ProficiencyBar({ level, color, delay }: { level: number; color: string; delay: number }) {
+function ProficiencyBar({ level, delay }: { level: number; delay: number }) {
   return (
     <div className="h-1 w-full bg-border/60 rounded-full overflow-hidden">
       <motion.div
-        className={`h-full rounded-full bg-gradient-to-r ${color}`}
+        className="h-full rounded-full bg-gradient-to-r from-blue-700 to-blue-400"
         initial={{ width: 0 }}
         whileInView={{ width: `${level}%` }}
         viewport={{ once: true }}
@@ -122,7 +101,7 @@ function ProficiencyBar({ level, color, delay }: { level: number; color: string;
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-28 bg-muted/30" data-testid="section-skills">
+    <section id="skills" className="py-24 md:py-28 bg-muted/30" data-testid="section-skills">
       <div className="container mx-auto px-6 md:px-12">
 
         <motion.div
@@ -148,24 +127,24 @@ export default function Skills() {
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.45, delay: idx * 0.07, ease: "easeOut" }}
               whileHover={{ y: -4 }}
-              className="glass-card p-6 rounded-2xl group cursor-default transition-shadow duration-300 hover:shadow-lg hover:shadow-black/10 flex flex-col"
+              className="glass-card p-6 rounded-2xl group cursor-default transition-shadow duration-300 hover:shadow-lg hover:shadow-primary/10 hover:border-primary/30 flex flex-col"
             >
               {/* Header */}
               <div className="flex items-center justify-between mb-5">
                 <div className="flex items-center gap-3">
-                  <div className={`p-2.5 rounded-xl ${category.bg} ${category.color} group-hover:scale-110 transition-transform duration-300`}>
+                  <div className="p-2.5 rounded-xl bg-primary/10 text-primary group-hover:scale-110 transition-transform duration-300">
                     {category.icon}
                   </div>
                   <h3 className="text-lg font-display font-bold">{category.title}</h3>
                 </div>
-                <span className={`text-xs font-bold font-mono ${category.color} opacity-80`}>
+                <span className="text-xs font-bold font-mono text-primary opacity-80">
                   {category.proficiency}%
                 </span>
               </div>
 
               {/* Category proficiency bar */}
               <div className="mb-5">
-                <ProficiencyBar level={category.proficiency} color={category.barColor} delay={idx * 0.07 + 0.2} />
+                <ProficiencyBar level={category.proficiency} delay={idx * 0.07 + 0.2} />
               </div>
 
               {/* Skill pills with individual bars */}
@@ -189,7 +168,6 @@ export default function Skills() {
                     </div>
                     <ProficiencyBar
                       level={skill.level}
-                      color={category.barColor}
                       delay={idx * 0.05 + sIdx * 0.04 + 0.3}
                     />
                   </motion.div>
