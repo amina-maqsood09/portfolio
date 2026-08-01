@@ -4,17 +4,71 @@ import { motion } from "framer-motion";
 export default function About() {
   return (
     <section id="about" className="py-28 relative overflow-hidden" data-testid="section-about">
-      {/* Subtle background accent */}
+      {/* Warm gold background accent */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="container mx-auto px-6 md:px-12 relative z-10">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
 
+        {/* ── Desktop: 3-column | Mobile: stacked ── */}
+        <div className="grid lg:grid-cols-[300px_1fr_1fr] gap-10 lg:gap-12 items-start">
+
+          {/* ── Column 1: Editorial Portrait ── */}
           <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={{ hidden: { opacity: 0, x: -32 }, visible: { opacity: 1, x: 0, transition: { duration: 0.65 } } }}
+            initial={{ opacity: 0, x: -24 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.65 }}
+            className="flex justify-center lg:justify-start"
+          >
+            <div className="relative w-64 lg:w-full max-w-[300px]">
+              {/* Gold accent border frame */}
+              <div
+                className="absolute -inset-[3px] rounded-3xl"
+                style={{
+                  background: "linear-gradient(135deg, #C9A66B40, transparent 50%, #C9A66B30)",
+                }}
+              />
+              {/* Subtle shadow glow */}
+              <div
+                className="absolute -inset-4 rounded-3xl blur-2xl"
+                style={{ background: "rgba(201,166,107,0.08)" }}
+              />
+              {/* Photo */}
+              <div className="relative rounded-3xl overflow-hidden aspect-[3/4] bg-muted border border-primary/20 shadow-2xl shadow-black/20">
+                <img
+                  src="/profile-photo.png"
+                  alt="Amina Maqsood"
+                  className="w-full h-full object-cover object-top"
+                />
+                {/* Subtle gold vignette overlay */}
+                <div
+                  className="absolute inset-0"
+                  style={{
+                    background: "linear-gradient(180deg, transparent 60%, rgba(201,166,107,0.08) 100%)",
+                  }}
+                />
+              </div>
+
+              {/* Name card below photo */}
+              <motion.div
+                initial={{ opacity: 0, y: 12 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="mt-4 glass-card px-4 py-3 rounded-2xl text-center"
+              >
+                <p className="font-display font-bold text-foreground text-sm">Amina Maqsood</p>
+                <p className="text-xs text-primary font-medium mt-0.5">Frontend Developer · AI Enthusiast</p>
+              </motion.div>
+            </div>
+          </motion.div>
+
+          {/* ── Column 2: Heading + Text ── */}
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.65, delay: 0.1 }}
           >
             <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-4">About Me</p>
             <h2 className="text-4xl md:text-5xl font-display font-bold mb-8 leading-[1.15]">
@@ -34,11 +88,12 @@ export default function About() {
             </div>
           </motion.div>
 
+          {/* ── Column 3: Journey Card ── */}
           <motion.div
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, margin: "-100px" }}
-            variants={{ hidden: { opacity: 0, x: 32 }, visible: { opacity: 1, x: 0, transition: { duration: 0.65, delay: 0.15 } } }}
+            initial={{ opacity: 0, x: 24 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, margin: "-80px" }}
+            transition={{ duration: 0.65, delay: 0.2 }}
             className="relative"
           >
             <div className="glass-card p-8 rounded-3xl relative z-10">
@@ -69,7 +124,7 @@ export default function About() {
                     initial={{ opacity: 0, x: 16 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.4, delay: 0.25 + i * 0.1 }}
+                    transition={{ duration: 0.4, delay: 0.3 + i * 0.1 }}
                     className="flex gap-5"
                   >
                     <div className={`flex-shrink-0 w-12 h-12 rounded-full ${item.color} flex items-center justify-center font-bold text-lg`}>
@@ -83,9 +138,13 @@ export default function About() {
                 ))}
               </ul>
             </div>
-            {/* Decorative gradient */}
-            <div className="absolute -bottom-6 -right-6 w-full h-full bg-gradient-to-br from-primary/15 to-secondary/15 rounded-3xl -z-10 blur-2xl" />
+            {/* Decorative gold gradient */}
+            <div
+              className="absolute -bottom-6 -right-6 w-full h-full rounded-3xl -z-10 blur-2xl"
+              style={{ background: "linear-gradient(135deg, rgba(201,166,107,0.12), rgba(168,133,74,0.08))" }}
+            />
           </motion.div>
+
         </div>
       </div>
     </section>

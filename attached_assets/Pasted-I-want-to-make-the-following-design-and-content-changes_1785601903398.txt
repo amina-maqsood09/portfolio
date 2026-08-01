@@ -1,0 +1,24 @@
+I want to make the following design and content changes to my portfolio website.
+
+1. REMOVE THE "DOWNLOAD CV" BUTTON
+- Remove the "Download CV" button from the hero section entirely.
+- Keep "View Projects" as the primary CTA button and "Get in Touch" as the secondary option. Adjust spacing so the hero buttons still look balanced with just these two.
+
+2. NEW COLOR PALETTE — "Charcoal & Champagne Gold"
+Replace the current purple/lavender theme across the entire site with a more premium, sophisticated palette:
+- Primary background: deep charcoal/near-black (e.g. #1A1A1A or #16161A) for dark sections, and warm off-white (e.g. #FAF9F6) for light sections
+- Accent color: warm champagne gold (e.g. #C9A66B or #D4AF7A) — use this for buttons, links, highlights, icons, and section dividers, replacing the current purple
+- Secondary accent (optional, for subtle contrast): soft charcoal-grey (e.g. #4A4A4A) for secondary text and borders
+- Apply this palette consistently across: hero gradient text, buttons, badge pills, timeline dots, skill category icons, card borders/hover states, and the navbar underline
+- The goal is a sophisticated, editorial, "premium portfolio" feel — not playful/pastel, but confident and polished. Think high-end personal brand site, not a generic dev template.
+- Update both light and dark mode variants to follow this new palette.
+
+3. ADD PROFILE PHOTO TO ABOUT SECTION
+- Add a professional profile photo to the About section (I will upload the image separately). Place it as a well-composed portrait element alongside or above the "Engineering with intent" text — for example, a rounded-corner image card with a subtle border/shadow, positioned to balance the text content (not a plain circular avatar — something a bit more editorial/intentional given the premium redesign).
+- Make sure the image is responsive and looks good on both desktop and mobile.
+
+4. OVERALL VISUAL ENHANCEMENT
+- With the new color palette in place, do a final consistency pass: make sure gradients, hover states, shadows, and button styles all feel unified under the new charcoal/gold theme.
+- Slightly increase visual polish on card components (projects, skills, certifications) — refined shadows, consistent border-radius, and subtle hover animations so the whole site feels cohesive and premium.
+
+Please implement this as a clearly separate pass from any previous content changes, and show me the hero section and About section first so I can confirm the new color direction before you apply it site-wide.

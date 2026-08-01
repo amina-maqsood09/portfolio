@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Download, Mail, Terminal, Code2, Award, Briefcase } from "lucide-react";
-import cvFile from "@assets/Amina_Maqsood_CV_2026_1782931472535.pdf";
+import { ArrowRight, Mail, Terminal, Code2, Award, Briefcase } from "lucide-react";
 import HeroIllustration from "./HeroIllustration";
 
 function FloatingOrb({ className }: { className: string }) {
@@ -27,7 +26,7 @@ function FloatingOrbSlow({ className }: { className: string }) {
 function GridLines() {
   return (
     <div
-      className="absolute inset-0 pointer-events-none opacity-[0.03] dark:opacity-[0.04]"
+      className="absolute inset-0 pointer-events-none opacity-[0.025] dark:opacity-[0.035]"
       style={{
         backgroundImage:
           "linear-gradient(hsl(var(--foreground)) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--foreground)) 1px, transparent 1px)",
@@ -56,9 +55,10 @@ export default function Hero() {
     >
       <GridLines />
 
-      <FloatingOrb className="top-[12%] left-[8%] w-[380px] h-[380px] bg-violet-600/18 blur-[90px] mix-blend-screen" />
-      <FloatingOrbSlow className="bottom-[15%] right-[6%] w-[320px] h-[320px] bg-indigo-500/14 blur-[80px] mix-blend-screen" />
-      <FloatingOrb className="top-[55%] left-[45%] w-[220px] h-[220px] bg-purple-500/8 blur-[70px] mix-blend-screen" />
+      {/* Gold-tinted orbs for champagne warmth */}
+      <FloatingOrb className="top-[12%] left-[8%] w-[400px] h-[400px] bg-amber-400/8 dark:bg-amber-500/10 blur-[100px]" />
+      <FloatingOrbSlow className="bottom-[15%] right-[6%] w-[340px] h-[340px] bg-yellow-300/6 dark:bg-yellow-400/8 blur-[90px]" />
+      <FloatingOrb className="top-[55%] left-[45%] w-[240px] h-[240px] bg-amber-300/5 dark:bg-amber-400/6 blur-[80px]" />
 
       <div className="absolute inset-0 pointer-events-none bg-radial-[at_50%_0%] from-transparent to-background/60" />
 
@@ -75,7 +75,7 @@ export default function Hero() {
             {/* Badge */}
             <motion.div
               variants={itemVariants}
-              className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary font-medium text-sm mb-8"
+              className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/25 text-primary font-medium text-sm mb-8"
               data-testid="badge-availability"
             >
               <span className="relative flex h-2 w-2">
@@ -92,7 +92,10 @@ export default function Hero() {
             >
               Hi, I'm Amina.
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-500 via-purple-400 to-indigo-400">
+              <span
+                className="text-transparent bg-clip-text"
+                style={{ backgroundImage: "linear-gradient(135deg, #C9A66B 0%, #E8C88A 45%, #A8854A 100%)" }}
+              >
                 Frontend Developer
               </span>
             </motion.h1>
@@ -105,44 +108,23 @@ export default function Hero() {
               A 3rd-year Software Engineering student at COMSATS University, building pixel-perfect interfaces and exploring the intersection of AI and frontend engineering.
             </motion.p>
 
-            {/* CTAs */}
+            {/* CTAs — two balanced buttons */}
             <motion.div variants={itemVariants} className="flex flex-wrap items-center gap-4 mb-14">
               <motion.a
                 href="#projects"
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
-                className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold shadow-lg shadow-primary/25 hover:shadow-primary/35 hover:bg-primary/90 transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-7 py-3.5 rounded-lg font-semibold shadow-lg shadow-primary/20 hover:shadow-primary/35 hover:brightness-110 transition-all duration-300"
                 data-testid="btn-view-projects"
               >
                 View Projects <ArrowRight size={18} />
-              </motion.a>
-
-              {/* Premium CV button — outline with gradient border, fills on hover */}
-              <motion.a
-                href={cvFile}
-                target="_blank"
-                rel="noopener noreferrer"
-                whileHover={{ scale: 1.04 }}
-                whileTap={{ scale: 0.97 }}
-                className="inline-flex items-center justify-center gap-2 relative px-6 py-3 rounded-lg font-semibold transition-all duration-300 group overflow-hidden border border-transparent"
-                style={{
-                  background: "linear-gradient(hsl(var(--background)), hsl(var(--background))) padding-box, linear-gradient(135deg, #7c3aed, #4f46e5) border-box",
-                }}
-                data-testid="btn-download-cv"
-              >
-                {/* Fill layer on hover */}
-                <span className="absolute inset-0 bg-gradient-to-r from-violet-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[7px]" />
-                <span className="relative flex items-center gap-2 bg-gradient-to-r from-violet-500 to-indigo-400 bg-clip-text text-transparent group-hover:text-white group-hover:bg-none transition-all duration-300">
-                  <Download size={18} className="text-violet-500 group-hover:text-white transition-colors duration-300" />
-                  <span className="group-hover:text-white transition-colors duration-300" style={{ WebkitTextFillColor: "inherit" }}>Download CV</span>
-                </span>
               </motion.a>
 
               <motion.a
                 href="#contact"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                className="inline-flex items-center justify-center gap-2 bg-transparent text-foreground border border-border px-6 py-3 rounded-lg font-semibold hover:bg-muted hover:border-primary/40 transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 bg-transparent text-foreground border border-border px-7 py-3.5 rounded-lg font-semibold hover:bg-muted hover:border-primary/50 transition-all duration-300"
                 data-testid="btn-contact"
               >
                 Get in Touch <Mail size={18} />
@@ -155,10 +137,10 @@ export default function Hero() {
               className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4 gap-3"
             >
               {[
-                { label: "Projects Built", value: "15+", icon: <Code2 className="text-violet-400 mb-2" size={18} /> },
-                { label: "Current CGPA", value: "3.57", icon: <Terminal className="text-indigo-400 mb-2" size={18} /> },
-                { label: "Certifications", value: "5", icon: <Award className="text-violet-400 mb-2" size={18} /> },
-                { label: "Internships", value: "2", icon: <Briefcase className="text-indigo-400 mb-2" size={18} /> },
+                { label: "Projects Built", value: "15+", icon: <Code2 size={18} /> },
+                { label: "Current CGPA", value: "3.57", icon: <Terminal size={18} /> },
+                { label: "Certifications", value: "5", icon: <Award size={18} /> },
+                { label: "Internships", value: "2", icon: <Briefcase size={18} /> },
               ].map((stat, i) => (
                 <motion.div
                   key={i}
@@ -167,7 +149,7 @@ export default function Hero() {
                   transition={{ type: "spring", stiffness: 300 }}
                   className="glass-card p-4 rounded-2xl flex flex-col justify-center cursor-default"
                 >
-                  {stat.icon}
+                  <span className="text-primary mb-2">{stat.icon}</span>
                   <h3 className="text-2xl font-display font-bold text-foreground mb-0.5">{stat.value}</h3>
                   <p className="text-xs text-muted-foreground font-medium">{stat.label}</p>
                 </motion.div>
@@ -186,7 +168,7 @@ export default function Hero() {
           </motion.div>
         </div>
 
-        {/* Mobile illustration — shown below content on small screens */}
+        {/* Mobile illustration */}
         <motion.div
           initial={{ opacity: 0, y: 32 }}
           animate={{ opacity: 1, y: 0 }}
