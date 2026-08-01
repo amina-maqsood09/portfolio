@@ -7,7 +7,7 @@ const fadeUp = {
   visible: (i: number) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, delay: i * 0.15, ease: "easeOut" },
+    transition: { duration: 0.5, delay: i * 0.12, ease: "easeOut" },
   }),
 };
 
@@ -43,7 +43,40 @@ const featuredProjects = [
     symbol: "< />",
     tags: ["HTML", "CSS", "JavaScript"],
     demoLink: "https://amina-maqsood09.github.io/portfolio",
-    githubLink: "https://github.com/amina-maqsood09",
+    githubLink: "https://github.com/amina-maqsood09/portfolio",
+  },
+  {
+    title: "Ledgerly — SaaS Landing Page",
+    description:
+      "A modern SaaS landing page demo for a fictional accounting platform, featuring animated hero sections, feature grids, pricing tables, and a polished responsive layout.",
+    gradient: "from-indigo-600/30 via-blue-600/20 to-violet-600/30",
+    accent: "text-indigo-400",
+    symbol: "$/",
+    tags: ["React", "Tailwind CSS", "Framer Motion"],
+    demoLink: "https://github.com/amina-maqsood09/saas-landing-page-demo",
+    githubLink: "https://github.com/amina-maqsood09/saas-landing-page-demo",
+  },
+  {
+    title: "Product List App",
+    description:
+      "A clean, interactive product listing application with filtering, cart management, and a responsive card-based UI — demonstrating core React state management patterns.",
+    gradient: "from-emerald-600/30 via-teal-600/20 to-cyan-600/30",
+    accent: "text-emerald-400",
+    symbol: "[ * ]",
+    tags: ["React", "JavaScript", "CSS"],
+    demoLink: "https://github.com/amina-maqsood09/product-list-app",
+    githubLink: "https://github.com/amina-maqsood09/product-list-app",
+  },
+  {
+    title: "FlyRank AI Capstone",
+    description:
+      "Capstone project built during the FlyRank AI internship — an AI-powered web application integrating intelligent frontend features and dynamic UI components for real-world production use.",
+    gradient: "from-purple-600/30 via-violet-600/20 to-fuchsia-600/30",
+    accent: "text-purple-400",
+    symbol: "AI",
+    tags: ["React", "AI Integration", "TypeScript"],
+    demoLink: "https://github.com/amina-maqsood09/flyrank-capstone",
+    githubLink: "https://github.com/amina-maqsood09/flyrank-capstone",
   },
 ];
 
@@ -76,6 +109,27 @@ const academicProjects = [
     tags: ["Cisco Packet Tracer", "OSPF", "VLANs", "Networking"],
     accent: "border-l-orange-500",
   },
+  {
+    title: "UX Lens AI Capstone",
+    description:
+      "AI-powered UX analysis tool that evaluates user interfaces, highlights accessibility issues, and generates actionable design improvement recommendations.",
+    tags: ["Python", "AI/ML", "UX Analysis"],
+    accent: "border-l-pink-500",
+  },
+  {
+    title: "Vision AI — Image Classification",
+    description:
+      "Deep learning image classification system trained to identify and categorise visual content using convolutional neural networks and transfer learning techniques.",
+    tags: ["Python", "TensorFlow", "CNN", "Computer Vision"],
+    accent: "border-l-indigo-500",
+  },
+  {
+    title: "Fire Brigade Robot",
+    description:
+      "Autonomous fire-detecting and extinguishing robot using flame sensors, servo motors, and microcontroller logic to navigate towards and suppress fire sources.",
+    tags: ["Arduino", "C++", "Robotics", "Sensors"],
+    accent: "border-l-red-500",
+  },
 ];
 
 export default function Projects() {
@@ -94,7 +148,7 @@ export default function Projects() {
           <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-3">Portfolio</p>
           <h2 className="text-4xl md:text-5xl font-display font-bold mb-4">Selected Works</h2>
           <p className="text-muted-foreground max-w-2xl text-lg leading-relaxed">
-            A mix of live frontend applications and complex academic engineering projects.
+            A mix of live frontend applications, AI capstones, and complex academic engineering projects.
           </p>
         </motion.div>
 
@@ -175,7 +229,7 @@ export default function Projects() {
           className="text-2xl font-display font-bold mb-8 flex items-center gap-3"
         >
           <span className="w-8 h-px bg-primary inline-block" />
-          Academic Engineering Projects
+          Academic &amp; Engineering Projects
         </motion.h3>
 
         <div className="grid md:grid-cols-2 gap-5">

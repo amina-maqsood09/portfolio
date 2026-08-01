@@ -9,7 +9,7 @@ const experiences = [
     period: "Jul 2026 – Present",
     location: "Remote",
     description:
-      "Building AI-powered frontend projects as part of the core engineering team. Developing highly interactive UI components and integrating seamless AI features into modern web applications.",
+      "Building AI-powered frontend features and interactive UI components as part of the core engineering team, integrating intelligent capabilities into modern web applications.",
     tags: ["React", "AI Integration", "UI/UX"],
     current: true,
     accent: "from-violet-500 to-purple-500",

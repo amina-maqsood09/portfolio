@@ -56,9 +56,9 @@ export default function Hero() {
     >
       <GridLines />
 
-      <FloatingOrb className="top-[12%] left-[8%] w-[380px] h-[380px] bg-primary/25 blur-[90px] mix-blend-screen" />
-      <FloatingOrbSlow className="bottom-[15%] right-[6%] w-[320px] h-[320px] bg-secondary/20 blur-[80px] mix-blend-screen" />
-      <FloatingOrb className="top-[55%] left-[45%] w-[220px] h-[220px] bg-primary/10 blur-[70px] mix-blend-screen" />
+      <FloatingOrb className="top-[12%] left-[8%] w-[380px] h-[380px] bg-violet-600/18 blur-[90px] mix-blend-screen" />
+      <FloatingOrbSlow className="bottom-[15%] right-[6%] w-[320px] h-[320px] bg-indigo-500/14 blur-[80px] mix-blend-screen" />
+      <FloatingOrb className="top-[55%] left-[45%] w-[220px] h-[220px] bg-purple-500/8 blur-[70px] mix-blend-screen" />
 
       <div className="absolute inset-0 pointer-events-none bg-radial-[at_50%_0%] from-transparent to-background/60" />
 
@@ -92,7 +92,7 @@ export default function Hero() {
             >
               Hi, I'm Amina.
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary via-purple-400 to-secondary">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-500 via-purple-400 to-indigo-400">
                 Frontend Developer
               </span>
             </motion.h1>
@@ -102,7 +102,7 @@ export default function Hero() {
               variants={itemVariants}
               className="text-lg md:text-xl text-muted-foreground max-w-xl mb-10 leading-relaxed"
             >
-              A 2nd-year Software Engineering student at COMSATS University, building pixel-perfect interfaces and exploring the intersection of AI and frontend engineering.
+              A 3rd-year Software Engineering student at COMSATS University, building pixel-perfect interfaces and exploring the intersection of AI and frontend engineering.
             </motion.p>
 
             {/* CTAs */}
@@ -111,22 +111,33 @@ export default function Hero() {
                 href="#projects"
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
-                className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold shadow-lg shadow-primary/20 hover:shadow-primary/30 hover:bg-primary/90 transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold shadow-lg shadow-primary/25 hover:shadow-primary/35 hover:bg-primary/90 transition-all duration-300"
                 data-testid="btn-view-projects"
               >
                 View Projects <ArrowRight size={18} />
               </motion.a>
+
+              {/* Premium CV button — outline with gradient border, fills on hover */}
               <motion.a
                 href={cvFile}
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
-                className="inline-flex items-center justify-center gap-2 bg-secondary text-secondary-foreground px-6 py-3 rounded-lg font-semibold shadow-lg shadow-secondary/20 hover:shadow-secondary/30 hover:bg-secondary/90 transition-all duration-300"
+                className="inline-flex items-center justify-center gap-2 relative px-6 py-3 rounded-lg font-semibold transition-all duration-300 group overflow-hidden border border-transparent"
+                style={{
+                  background: "linear-gradient(hsl(var(--background)), hsl(var(--background))) padding-box, linear-gradient(135deg, #7c3aed, #4f46e5) border-box",
+                }}
                 data-testid="btn-download-cv"
               >
-                Download CV <Download size={18} />
+                {/* Fill layer on hover */}
+                <span className="absolute inset-0 bg-gradient-to-r from-violet-600 to-indigo-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-[7px]" />
+                <span className="relative flex items-center gap-2 bg-gradient-to-r from-violet-500 to-indigo-400 bg-clip-text text-transparent group-hover:text-white group-hover:bg-none transition-all duration-300">
+                  <Download size={18} className="text-violet-500 group-hover:text-white transition-colors duration-300" />
+                  <span className="group-hover:text-white transition-colors duration-300" style={{ WebkitTextFillColor: "inherit" }}>Download CV</span>
+                </span>
               </motion.a>
+
               <motion.a
                 href="#contact"
                 whileHover={{ scale: 1.03 }}
@@ -144,10 +155,10 @@ export default function Hero() {
               className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4 gap-3"
             >
               {[
-                { label: "Projects Built", value: "10+", icon: <Code2 className="text-primary mb-2" size={18} /> },
-                { label: "Current CGPA", value: "3.62", icon: <Terminal className="text-secondary mb-2" size={18} /> },
-                { label: "Certifications", value: "5", icon: <Award className="text-primary mb-2" size={18} /> },
-                { label: "Internships", value: "2", icon: <Briefcase className="text-secondary mb-2" size={18} /> },
+                { label: "Projects Built", value: "15+", icon: <Code2 className="text-violet-400 mb-2" size={18} /> },
+                { label: "Current CGPA", value: "3.57", icon: <Terminal className="text-indigo-400 mb-2" size={18} /> },
+                { label: "Certifications", value: "5", icon: <Award className="text-violet-400 mb-2" size={18} /> },
+                { label: "Internships", value: "2", icon: <Briefcase className="text-indigo-400 mb-2" size={18} /> },
               ].map((stat, i) => (
                 <motion.div
                   key={i}

@@ -30,9 +30,17 @@ export default function HeroIllustration() {
         className="relative w-full max-w-[420px]"
       >
         {/* Glow behind editor */}
-        <div className="absolute -inset-6 bg-primary/20 rounded-3xl blur-3xl pointer-events-none" />
+        <div className="absolute -inset-8 bg-violet-600/15 rounded-3xl blur-[40px] pointer-events-none" />
 
-        <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-black/40 bg-[#0f0f1a]">
+        {/* Editor frame with polished border */}
+        <div
+          className="relative rounded-2xl overflow-hidden shadow-2xl shadow-black/50"
+          style={{
+            background: "#0d0d1a",
+            border: "1px solid rgba(167,139,250,0.18)",
+            boxShadow: "0 0 0 1px rgba(99,102,241,0.12), 0 24px 48px -8px rgba(0,0,0,0.6), 0 0 40px -8px rgba(124,58,237,0.18)",
+          }}
+        >
           {/* Title bar */}
           <div className="flex items-center gap-2 px-4 py-3 bg-[#1a1a2e] border-b border-white/5">
             <span className="w-3 h-3 rounded-full bg-[#ff5f57]" />
@@ -46,7 +54,6 @@ export default function HeroIllustration() {
 
           {/* Code body */}
           <div className="px-5 py-5 font-mono text-[13px] leading-[1.8] space-y-0.5 bg-[#0d0d1a]">
-            {/* Line numbers + code */}
             {CODE_LINES.map((line, li) => (
               <motion.div
                 key={li}
@@ -60,7 +67,6 @@ export default function HeroIllustration() {
                   {line.tokens.map((tok, ti) => (
                     <span key={ti} style={{ color: tok.c || "#e2e8f0" }}>{tok.t}</span>
                   ))}
-                  {/* Blinking cursor on last line */}
                   {li === CODE_LINES.length - 1 && (
                     <motion.span
                       className="inline-block w-[2px] h-[14px] bg-[#a78bfa] ml-0.5 align-middle"
@@ -87,10 +93,11 @@ export default function HeroIllustration() {
         initial={{ opacity: 0, x: 24 }}
         animate={{ opacity: 1, x: 0, y: [0, -12, 0] }}
         transition={{ opacity: { duration: 0.5, delay: 0.8 }, x: { duration: 0.5, delay: 0.8 }, y: { duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 } }}
-        className="absolute -right-4 top-6 w-36 rounded-xl border border-white/10 bg-[#1a1a2e]/90 backdrop-blur-md shadow-xl p-3 z-10"
+        className="absolute -right-4 top-6 w-36 rounded-xl bg-[#1a1a2e]/90 backdrop-blur-md shadow-xl p-3 z-10"
+        style={{ border: "1px solid rgba(167,139,250,0.15)" }}
       >
         <p className="text-[10px] font-mono text-white/30 mb-2">Button.tsx</p>
-        <div className="w-full h-7 rounded-lg bg-gradient-to-r from-[#7c3aed] to-[#0891b2] flex items-center justify-center">
+        <div className="w-full h-7 rounded-lg bg-gradient-to-r from-[#7c3aed] to-[#4f46e5] flex items-center justify-center shadow-md shadow-violet-900/40">
           <span className="text-[11px] font-semibold text-white">Get Started →</span>
         </div>
         <div className="mt-2 flex gap-1.5">
@@ -104,13 +111,14 @@ export default function HeroIllustration() {
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0, y: [0, 10, 0] }}
         transition={{ opacity: { duration: 0.5, delay: 1.0 }, x: { duration: 0.5, delay: 1.0 }, y: { duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 } }}
-        className="absolute -left-4 bottom-10 w-32 rounded-xl border border-white/10 bg-[#1a1a2e]/90 backdrop-blur-md shadow-xl p-3 z-10"
+        className="absolute -left-4 bottom-10 w-32 rounded-xl bg-[#1a1a2e]/90 backdrop-blur-md shadow-xl p-3 z-10"
+        style={{ border: "1px solid rgba(167,139,250,0.15)" }}
       >
         <p className="text-[10px] font-mono text-white/30 mb-2.5">colors</p>
         <div className="space-y-1.5">
           {[
             { name: "primary", color: "#7c3aed" },
-            { name: "accent", color: "#0891b2" },
+            { name: "accent", color: "#4f46e5" },
             { name: "surface", color: "#1e1b4b" },
           ].map(({ name, color }) => (
             <div key={name} className="flex items-center gap-2">
@@ -126,7 +134,8 @@ export default function HeroIllustration() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: [20, 8, 20] }}
         transition={{ opacity: { duration: 0.4, delay: 1.2 }, y: { duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1.2 } }}
-        className="absolute right-2 bottom-2 rounded-xl border border-white/10 bg-[#1a1a2e]/90 backdrop-blur-md shadow-xl px-3 py-2.5 flex items-center gap-2.5 z-10"
+        className="absolute right-2 bottom-2 rounded-xl bg-[#1a1a2e]/90 backdrop-blur-md shadow-xl px-3 py-2.5 flex items-center gap-2.5 z-10"
+        style={{ border: "1px solid rgba(167,139,250,0.15)" }}
       >
         <div className="relative w-8 h-8 flex-shrink-0">
           <svg viewBox="0 0 36 36" className="w-8 h-8 -rotate-90">
@@ -147,7 +156,8 @@ export default function HeroIllustration() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: [0, -6, 0] }}
         transition={{ opacity: { duration: 0.4, delay: 1.4 }, y: { duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 1.4 } }}
-        className="absolute -left-2 top-8 rounded-lg border border-[#7c3aed]/30 bg-[#7c3aed]/10 backdrop-blur-md px-2.5 py-1.5 flex items-center gap-1.5 z-10"
+        className="absolute -left-2 top-8 rounded-lg backdrop-blur-md px-2.5 py-1.5 flex items-center gap-1.5 z-10"
+        style={{ border: "1px solid rgba(124,58,237,0.3)", background: "rgba(124,58,237,0.1)" }}
       >
         <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
           <rect x="0" y="0" width="7" height="8" rx="1" stroke="#a78bfa" strokeWidth="1.2"/>

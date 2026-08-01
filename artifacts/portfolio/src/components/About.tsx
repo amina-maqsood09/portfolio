@@ -1,11 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
-};
-
 export default function About() {
   return (
     <section id="about" className="py-28 relative overflow-hidden" data-testid="section-about">
@@ -28,10 +23,10 @@ export default function About() {
             </h2>
             <div className="space-y-5 text-base md:text-lg text-muted-foreground leading-relaxed">
               <p>
-                I'm a second-year Bachelor of Software Engineering student at COMSATS University Islamabad. What started as curiosity about how the web works has evolved into a disciplined pursuit of software architecture and frontend engineering.
+                I'm a third-year Bachelor of Software Engineering student at COMSATS University Islamabad. What started as curiosity about how the web works has grown into a disciplined pursuit of software architecture, AI-powered interfaces, and frontend engineering — backed by two internships and a growing body of real-world projects.
               </p>
               <p>
-                Currently expanding into Artificial Intelligence — I believe the future of software isn't just rendering data on a screen, it's building intelligent systems that truly understand user intent.
+                I'm actively building at the intersection of frontend development and Artificial Intelligence — integrating AI capabilities into production-grade web applications that are fast, accessible, and genuinely useful.
               </p>
               <p>
                 When I'm not writing code, I'm analysing algorithms, designing scalable databases, or exploring network security. I build things to learn, and I learn to build better things.
@@ -51,9 +46,9 @@ export default function About() {
               <ul className="space-y-7">
                 {[
                   {
-                    value: "4",
+                    value: "5",
                     label: "Current Semester",
-                    sub: "Deep diving into Advanced Data Structures and OOP.",
+                    sub: "Deep diving into advanced coursework and applied software engineering.",
                     color: "bg-primary/10 text-primary",
                   },
                   {
@@ -63,9 +58,9 @@ export default function About() {
                     color: "bg-secondary/10 text-secondary",
                   },
                   {
-                    value: "10+",
+                    value: "15+",
                     label: "Projects Shipped",
-                    sub: "From AI agents to encrypted chat apps and enterprise networks.",
+                    sub: "From AI capstones to encrypted chat apps and enterprise networks.",
                     color: "bg-accent text-accent-foreground",
                   },
                 ].map((item, i) => (

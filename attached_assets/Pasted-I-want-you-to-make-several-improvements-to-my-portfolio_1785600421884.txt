@@ -1,0 +1,45 @@
+I want you to make several improvements to my portfolio website. Please implement these carefully, testing after each major section so nothing breaks.
+
+1. HERO SECTION (first page)
+- Redesign the "Download CV" button to look more polished — use a more premium style (subtle gradient or outline-to-fill hover effect), and make sure it stands out clearly from "View Projects."
+- Review the current color palette (purple/teal accents) and refine it for a more cohesive, professional look — keep it modern but not too playful. You can suggest a slightly more muted or premium accent palette if it improves visual hierarchy.
+- Keep the code-editor visual element, but polish its shadow/border so it feels more integrated with the layout.
+
+2. PERSONAL INFO UPDATES
+- Change CGPA from 3.62 to 3.57 (update everywhere it appears: stats card and About section timeline).
+- Change "Current Semester" from 4 to 5, and update the description to something like "Deep diving into advanced coursework" (keep generic, don't overspecify).
+
+3. PROJECTS SECTION — ADD MISSING PROJECTS
+Add new project cards for the following (pull real descriptions/tech stacks from my GitHub repos):
+- SaaS Landing Page Demo (Ledgerly) — from repo "saas-landing-page-demo"
+- Product List App — from repo "product-list-app"
+- UX Lens AI Capstone — from repo "uxlens-ai-capstone"
+- Vision AI Image Classification — from repo "vision-ai-image-classification"
+- Fire Brigade Robot — from repo "Fire-Brigade-Robot"
+- FlyRank Capstone project — from repo "flyrank-capstone"
+Keep the existing project cards (Calculator, Image Gallery, Portfolio v1, Smart Study Planner, Encrypted Chat, Complaint Management System, NETSOL Network) as is. Match the same card style/format already used.
+
+4. EXPERIENCE SECTION — TRIM FLYRANK DETAILS
+- Shorten the FlyRank Frontend Developer Intern description — remove granular task-level detail, keep it high-level (1-2 sentences about building AI-powered frontend features and UI components).
+
+5. CERTIFICATIONS SECTION
+- Remove specific named course titles and counts under any FlyRank/Anthropic-related certification.
+- Replace with a single generic line such as "Completed Anthropic AI courses as part of ongoing professional development" — do not list a specific number of courses or individual course names.
+
+6. ABOUT SECTION
+- Refresh the "Engineering with intent" copy slightly to feel more current and confident — keep the tone but make it sound a bit more accomplished and forward-looking given the additional internship experience and projects since it was last written.
+
+7. SKILLS SECTION
+- Enhance the visual presentation — instead of plain tag pills only, add a visual element per category, such as small progress/proficiency bars, radial indicators, or icon-based visual weight, so it feels more dynamic. Keep the existing category groupings (Languages, Web Technologies, Data & Analytics, Security & Networking, Developer Tools, Soft Skills).
+
+8. EDUCATION & CERTIFICATIONS
+- Enhance visual styling of the timeline (education) and certificate cards — add subtle icons, better spacing, and a more premium card design consistent with the rest of the site.
+
+9. CONTACT SECTION
+- Update location from "Islamabad, Pakistan (Remote-Ready)" to "Vehari, Punjab, Pakistan (Remote-Ready)"
+- Add a new social icon/link for X (Twitter): https://x.com/AmnaMaqsood09 — place it alongside the existing LinkedIn and GitHub icons.
+
+10. OVERALL POLISH
+- Do a final pass across the whole site to ensure consistent spacing, shadow depth, and color usage so it feels like a cohesive, premium, professional portfolio — not a template.
+
+Please implement section by section, and let me know after each section is done so I can review before moving to the next.

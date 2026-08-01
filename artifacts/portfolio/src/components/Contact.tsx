@@ -7,6 +7,21 @@ const EMAILJS_SERVICE_ID = "service_b8m026x";
 const EMAILJS_TEMPLATE_ID = "template_eoqv3r6";
 const EMAILJS_PUBLIC_KEY = "zdt7U3xUzKIF-t8lP";
 
+// X / Twitter icon (not in lucide)
+function XIcon({ size = 20 }: { size?: number }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+    </svg>
+  );
+}
+
 type FormStatus = "idle" | "sending" | "success" | "error";
 
 export default function Contact() {
@@ -35,6 +50,27 @@ export default function Contact() {
     hidden: { opacity: 0, y: 24 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: "easeOut" } },
   };
+
+  const socialLinks = [
+    {
+      href: "https://linkedin.com/in/amina-maqsood09",
+      label: "LinkedIn",
+      icon: <Linkedin size={20} />,
+      testId: "link-linkedin",
+    },
+    {
+      href: "https://github.com/amina-maqsood09",
+      label: "GitHub",
+      icon: <Github size={20} />,
+      testId: "link-github",
+    },
+    {
+      href: "https://x.com/AmnaMaqsood09",
+      label: "X (Twitter)",
+      icon: <XIcon size={20} />,
+      testId: "link-twitter",
+    },
+  ];
 
   return (
     <section id="contact" className="py-28 bg-muted/30 border-t border-border" data-testid="section-contact">
@@ -91,29 +127,27 @@ export default function Contact() {
               </div>
               <div>
                 <p className="text-sm text-muted-foreground font-medium">Location</p>
-                <p className="font-semibold">Islamabad, Pakistan (Remote-Ready)</p>
+                <p className="font-semibold">Vehari, Punjab, Pakistan (Remote-Ready)</p>
               </div>
             </div>
 
-            <div className="flex gap-4 pt-2">
-              <a
-                href="https://linkedin.com/in/amina-maqsood09"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center text-foreground hover:bg-primary hover:text-white hover:border-primary transition-all duration-300"
-                data-testid="link-linkedin"
-              >
-                <Linkedin size={20} />
-              </a>
-              <a
-                href="https://github.com/amina-maqsood09"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center text-foreground hover:bg-primary hover:text-white hover:border-primary transition-all duration-300"
-                data-testid="link-github"
-              >
-                <Github size={20} />
-              </a>
+            {/* Social icons row */}
+            <div className="flex gap-3 pt-2">
+              {socialLinks.map((link) => (
+                <motion.a
+                  key={link.testId}
+                  href={link.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={link.label}
+                  whileHover={{ scale: 1.1, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="w-12 h-12 rounded-full bg-card border border-border flex items-center justify-center text-foreground hover:bg-primary hover:text-white hover:border-primary transition-all duration-300"
+                  data-testid={link.testId}
+                >
+                  {link.icon}
+                </motion.a>
+              ))}
             </div>
 
             <div className="p-4 rounded-xl bg-primary/5 border border-primary/20">
