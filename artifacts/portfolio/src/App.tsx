@@ -19,7 +19,7 @@ function Router() {
 
 function App() {
   return (
-    <ThemeProvider defaultTheme="dark" storageKey="amina-portfolio-theme">
+    <ThemeProvider defaultTheme="light" storageKey="amina-portfolio-theme">
       <QueryClientProvider client={queryClient}>
         <TooltipProvider>
           <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>

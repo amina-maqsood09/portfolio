@@ -1,0 +1,35 @@
+Redesign the visual styling of my portfolio to look like a premium SaaS product, similar to Linear, Vercel, Stripe, or Notion.
+
+IMPORTANT: Do NOT change my layout, content, structure, or functionality. Only improve the visual design (colors, spacing, shadows, effects, typography styling, animations). Keep this strictly frontend — do not add or modify any backend/server code.
+
+Requirements:
+- Replace the current blue with a more premium, modern accent color — professional and elegant, not overly saturated.
+- Improve the overall color palette while keeping a clean white theme.
+- Make the background feel more premium with subtle visual elements: soft gradients, blurred glow effects, light grid patterns, or abstract shapes. Keep it minimal, avoid clutter.
+- Improve shadows, borders, spacing, and card styling using a modern design system.
+- Add smooth hover animations to buttons, cards, and navigation links.
+- Use consistent border radius throughout the site.
+- Add subtle glassmorphism where appropriate — very light, not excessive.
+- Improve typography hierarchy and spacing while keeping the same fonts.
+- Enhance the hero section with soft ambient glow effects behind key elements.
+- Make the floating code editor visual look more realistic and premium.
+- Improve button styles with better hover states and transitions.
+- Keep the design fully responsive on mobile and desktop.
+- Maintain excellent accessibility and color contrast (WCAG AA minimum).
+- Follow a minimal, modern SaaS UI style overall.
+
+Color palette to use:
+- Primary accent: #2563EB or #3B82F6
+- Background: #FFFFFF
+- Surface: #F8FAFC
+- Text: #0F172A
+- Border: #E2E8F0
+
+Contact section fixes:
+- Phone number should open WhatsApp when clicked (use a wa.me link with my number, not tel:).
+- LinkedIn icon should open my LinkedIn profile in a new tab.
+- GitHub icon should open my GitHub profile in a new tab.
+- X/Twitter icon should open my X profile in a new tab.
+- All social/contact links should use target="_blank" and rel="noopener noreferrer".
+
+The final result should feel like a professional product website rather than a student portfolio — focus on polish, consistency, and premium UI details without making it flashy or overly colorful.

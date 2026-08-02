@@ -54,31 +54,31 @@
   --app-font-display: 'Outfit', sans-serif;
   --radius: 0.75rem;
 
-  /* ── Light Theme — Monochrome + Electric Blue ── */
-  --background: 240 5% 97%;        /* #F7F7F8 very light grey */
-  --foreground: 0 0% 4%;           /* #0A0A0A near black */
-  --border: 220 9% 89%;            /* #E2E4E9 light grey */
-  --input: 220 9% 89%;
-  --ring: 221 83% 53%;             /* blue ring */
+  /* ── Light Mode — Premium SaaS ── */
+  --background: 0 0% 100%;           /* #FFFFFF */
+  --foreground: 222 47% 11%;         /* #0F172A */
+  --border: 214 32% 91%;             /* #E2E8F0 */
+  --input: 214 32% 91%;
+  --ring: 221 83% 53%;
 
-  --card: 0 0% 100%;               /* pure white */
-  --card-foreground: 0 0% 4%;
-  --card-border: 220 9% 89%;
+  --card: 210 40% 98%;               /* #F8FAFC */
+  --card-foreground: 222 47% 11%;
+  --card-border: 214 32% 91%;
 
   --popover: 0 0% 100%;
-  --popover-foreground: 0 0% 4%;
-  --popover-border: 220 9% 89%;
+  --popover-foreground: 222 47% 11%;
+  --popover-border: 214 32% 91%;
 
-  --primary: 221 83% 53%;          /* electric blue #2563EB */
-  --primary-foreground: 0 0% 100%; /* white text on blue */
+  --primary: 221 83% 53%;            /* #2563EB */
+  --primary-foreground: 0 0% 100%;
 
-  --secondary: 0 0% 20%;           /* dark grey */
+  --secondary: 215 16% 47%;          /* #64748B slate-500 */
   --secondary-foreground: 0 0% 100%;
 
-  --muted: 220 9% 94%;             /* light grey surface */
-  --muted-foreground: 0 0% 40%;
+  --muted: 210 40% 96%;              /* #F1F5F9 slate-100 */
+  --muted-foreground: 215 16% 47%;   /* #64748B */
 
-  --accent: 221 100% 96%;          /* pale blue tint #EFF6FF */
+  --accent: 214 100% 97%;            /* #EFF6FF blue-50 */
   --accent-foreground: 221 83% 40%;
 
   --destructive: 0 84% 60%;
@@ -92,32 +92,32 @@
 }
 
 .dark {
-  /* ── Dark Theme — Pure Black + Electric Blue ── */
-  --background: 0 0% 4%;           /* #0A0A0A pure black */
-  --foreground: 0 0% 98%;          /* near white */
-  --border: 0 0% 14%;              /* #242424 dark border */
-  --input: 0 0% 14%;
+  /* ── Dark Mode — Premium Slate ── */
+  --background: 224 71% 4%;          /* #020617 slate-950 */
+  --foreground: 210 40% 98%;         /* #F8FAFC */
+  --border: 217 33% 17%;             /* #1E293B slate-800 */
+  --input: 217 33% 17%;
   --ring: 217 91% 60%;
 
-  --card: 0 0% 7%;                 /* #111111 card surface */
-  --card-foreground: 0 0% 98%;
-  --card-border: 0 0% 14%;
+  --card: 222 47% 8%;                /* #0F172A slate-900 */
+  --card-foreground: 210 40% 98%;
+  --card-border: 217 33% 17%;
 
-  --popover: 0 0% 7%;
-  --popover-foreground: 0 0% 98%;
-  --popover-border: 0 0% 14%;
+  --popover: 222 47% 8%;
+  --popover-foreground: 210 40% 98%;
+  --popover-border: 217 33% 17%;
 
-  --primary: 217 91% 60%;          /* #3B82F6 slightly brighter in dark */
+  --primary: 217 91% 60%;            /* #3B82F6 */
   --primary-foreground: 0 0% 100%;
 
-  --secondary: 0 0% 60%;           /* medium grey */
-  --secondary-foreground: 0 0% 4%;
+  --secondary: 215 20% 65%;          /* #94A3B8 slate-400 */
+  --secondary-foreground: 222 47% 11%;
 
-  --muted: 0 0% 10%;               /* #1A1A1A */
-  --muted-foreground: 0 0% 55%;
+  --muted: 217 33% 17%;              /* #1E293B */
+  --muted-foreground: 215 20% 65%;   /* #94A3B8 */
 
-  --accent: 221 50% 10%;           /* very dark blue tint */
-  --accent-foreground: 217 91% 72%;
+  --accent: 217 33% 17%;
+  --accent-foreground: 214 100% 82%;
 
   --destructive: 0 84% 60%;
   --destructive-foreground: 0 0% 100%;
@@ -139,10 +139,28 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Glassmorphism utilities */
-.glass {
-  @apply bg-white/5 dark:bg-black/20 backdrop-blur-md border border-white/10 dark:border-white/5;
-}
+/* ── Premium card — the main reusable surface ── */
 .glass-card {
-  @apply bg-white/70 dark:bg-zinc-900/60 backdrop-blur-xl border border-black/8 dark:border-white/8 shadow-xl dark:shadow-2xl;
+  @apply bg-white dark:bg-slate-900/80
+         border border-slate-200 dark:border-slate-800
+         shadow-sm
+         transition-all duration-200;
+}
+
+/* hover lift used on interactive cards */
+.card-hover {
+  @apply hover:shadow-md hover:-translate-y-0.5 hover:border-blue-200 dark:hover:border-slate-700;
+}
+
+/* Glassmorphism (nav, floating elements) */
+.glass {
+  @apply bg-white/80 dark:bg-slate-950/80
+         backdrop-blur-xl
+         border border-slate-200/70 dark:border-slate-800/70;
+}
+
+/* Subtle dot-grid hero bg */
+.dot-grid {
+  background-image: radial-gradient(circle, hsl(215 16% 47% / 0.15) 1px, transparent 1px);
+  background-size: 28px 28px;
 }
