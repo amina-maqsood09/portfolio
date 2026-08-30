@@ -232,13 +232,20 @@ export default function HeroIllustration() {
           backdropFilter: "blur(12px)",
         }}
       >
-        <div className="relative w-8 h-8 flex-shrink-0">
-          <svg viewBox="0 0 36 36" className="w-8 h-8 -rotate-90">
-            <circle cx="18" cy="18" r="14" fill="none" stroke="#1E3A5F" strokeWidth="4" />
-            <circle cx="18" cy="18" r="14" fill="none" stroke={STATUS_BAR} strokeWidth="4"
-              strokeDasharray="88" strokeDashoffset="9" strokeLinecap="round" />
-          </svg>
-          <span className="absolute inset-0 flex items-center justify-center text-[9px] font-bold" style={{ color: "#93C5FD" }}>90</span>
+               <div
+          className="relative w-8 h-8 flex-shrink-0 rounded-full flex items-center justify-center"
+          style={{
+            background: "conic-gradient(#34D399 0% 90%, rgba(255,255,255,0.12) 90% 100%)",
+          }}
+        >
+          <div
+            className="w-6 h-6 rounded-full flex items-center justify-center"
+            style={{ background: "#1E1E1E" }}
+          >
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none">
+              <path d="M13 2L3 14h7l-1 8 11-14h-7l1-6z" fill="#34D399" />
+            </svg>
+          </div>
         </div>
         <div>
           <p className="text-[11px] font-semibold" style={{ color: "rgba(255,255,255,0.75)" }}>Lighthouse</p>
