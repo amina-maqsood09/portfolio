@@ -2,19 +2,19 @@ import React from "react";
 import { motion } from "framer-motion";
 
 // VS Code Dark+ palette
-const EDITOR_BG     = "#1E1E1E";
-const TITLE_BAR     = "#3C3C3C";
-const TAB_BAR       = "#2D2D2D";
-const STATUS_BAR    = "#007ACC";
-const LINE_NUM_COL  = "#858585";
-const PLAIN         = "#D4D4D4";
-const KEYWORD       = "#569CD6";   // const, return, from
-const COMPONENT     = "#4EC9B0";   // React components
-const JSX_PUNCT     = "#808080";   // < >  / />
-const STRING        = "#CE9178";   // string literals
-const ATTR_NAME     = "#9CDCFE";   // JSX attribute names
-const IMPORT_NAME   = "#D7BA7D";   // import { … }
-const ACCENT        = "#007ACC";   // blue accent
+const EDITOR_BG = "#1E1E1E";
+const TITLE_BAR = "#3C3C3C";
+const TAB_BAR = "#2D2D2D";
+const STATUS_BAR = "#007ACC";
+const LINE_NUM_COL = "#858585";
+const PLAIN = "#D4D4D4";
+const KEYWORD = "#569CD6";   // const, return, from
+const COMPONENT = "#4EC9B0";   // React components
+const JSX_PUNCT = "#808080";   // < >  / />
+const STRING = "#CE9178";   // string literals
+const ATTR_NAME = "#9CDCFE";   // JSX attribute names
+const IMPORT_NAME = "#D7BA7D";   // import { … }
+const ACCENT = "#007ACC";   // blue accent
 
 const CODE_LINES = [
   { num: 1, tokens: [{ t: "import ", c: KEYWORD }, { t: "React", c: IMPORT_NAME }, { t: " from ", c: KEYWORD }, { t: "'react'", c: STRING }] },
@@ -204,7 +204,7 @@ export default function HeroIllustration() {
           {[
             { name: "primary", color: "#2563EB" },
             { name: "surface", color: "#F8FAFC" },
-            { name: "text",    color: "#0F172A" },
+            { name: "text", color: "#0F172A" },
           ].map(({ name, color }) => (
             <div key={name} className="flex items-center gap-2">
               <span
