@@ -1,12 +1,12 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { motion, cubicBezier } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
   visible: (i: number) => ({
     opacity: 1, y: 0,
-    transition: { duration: 0.45, delay: i * 0.1, ease: "easeOut" },
+    transition: { duration: 0.45, delay: i * 0.1, ease: cubicBezier(0.42, 0, 0.58, 1) },
   }),
 };
 
