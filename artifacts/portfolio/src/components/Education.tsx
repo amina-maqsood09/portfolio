@@ -30,7 +30,7 @@ export default function Education() {
               transition={{ duration: 0.5 }}
               className="flex items-center gap-3 mb-10"
             >
-              <div className="p-2 rounded-lg bg-blue-50 dark:bg-blue-950/50">
+              <div className="p-2 rounded-lg bg-amber-50 dark:bg-amber-950/50">
                 <GraduationCap className="w-5 h-5 text-primary" />
               </div>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white">Education</h2>
@@ -46,13 +46,13 @@ export default function Education() {
                   transition={{ duration: 0.45, delay: idx * 0.1 }}
                   className="relative"
                 >
-                  <div className={`absolute -left-[27px] top-5 w-6 h-6 rounded-full flex items-center justify-center ring-4 ring-white dark:ring-background shadow-sm ${edu.highlight ? "bg-primary text-white shadow-blue-500/25" : "bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 border border-slate-200 dark:border-slate-700"}`}>
+                  <div className={`absolute -left-[27px] top-5 w-6 h-6 rounded-full flex items-center justify-center ring-4 ring-white dark:ring-background shadow-sm ${edu.highlight ? "bg-primary text-white shadow-amber-500/25" : "bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 border border-slate-200 dark:border-slate-700"}`}>
                     {edu.icon}
                   </div>
                   <motion.div
                     whileHover={{ x: 3 }}
                     transition={{ type: "spring", stiffness: 320, damping: 26 }}
-                    className={`p-5 rounded-xl border transition-all duration-200 ${edu.highlight ? "border-blue-200 dark:border-blue-800/60 bg-blue-50/50 dark:bg-blue-950/20 shadow-sm shadow-blue-500/8" : "border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:border-blue-200 dark:hover:border-slate-700 hover:shadow-sm"}`}
+                    className={`p-5 rounded-xl border transition-all duration-200 ${edu.highlight ? "border-amber-200 dark:border-amber-800/60 bg-amber-50/50 dark:bg-amber-950/20 shadow-sm shadow-amber-500/8" : "border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:border-amber-200 dark:hover:border-slate-700 hover:shadow-sm"}`}
                   >
                     <div className="flex items-start justify-between gap-3 mb-1.5 flex-wrap">
                       <h3 className="font-bold text-[15px] leading-tight text-slate-900 dark:text-white">{edu.degree}</h3>
@@ -75,7 +75,7 @@ export default function Education() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="flex items-center gap-3 mb-10"
             >
-              <div className="p-2 rounded-lg bg-blue-50 dark:bg-blue-950/50">
+              <div className="p-2 rounded-lg bg-amber-50 dark:bg-amber-950/50">
                 <Trophy className="w-5 h-5 text-primary" />
               </div>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-slate-900 dark:text-white">Certifications</h2>
@@ -90,11 +90,11 @@ export default function Education() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: idx * 0.09 }}
                   whileHover={{ y: -2 }}
-                  className="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 border-l-4 border-l-blue-500 hover:shadow-md hover:shadow-blue-500/8 hover:border-blue-200 dark:hover:border-slate-700 transition-all duration-200"
+                  className="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 border-l-4 border-l-amber-500 hover:shadow-md hover:shadow-amber-500/8 hover:border-amber-200 dark:hover:border-slate-700 transition-all duration-200"
                 >
                   <div className="flex items-start justify-between gap-3 mb-1.5 flex-wrap">
                     <div className="flex items-start gap-3">
-                      <div className="mt-0.5 p-1.5 rounded-lg bg-blue-50 dark:bg-blue-950/50 flex-shrink-0">
+                      <div className="mt-0.5 p-1.5 rounded-lg bg-amber-50 dark:bg-amber-950/50 flex-shrink-0">
                         <Award className="w-3.5 h-3.5 text-primary" />
                       </div>
                       <h3 className="font-bold text-[15px] leading-tight text-slate-900 dark:text-white">{cert.title}</h3>

@@ -161,8 +161,8 @@ export default function HeroIllustration() {
         <div
           className="w-full h-7 rounded-md flex items-center justify-center text-[11px] font-semibold text-white"
           style={{
-            background: "linear-gradient(135deg, #1D4ED8, #2563EB)",
-            boxShadow: "0 4px 14px rgba(37,99,235,0.5)",
+            background: "linear-gradient(135deg, #B45309, #D97706)",
+            boxShadow: "0 4px 14px rgba(217,119,6,0.5)",
           }}
         >
           Get Started →
@@ -170,7 +170,7 @@ export default function HeroIllustration() {
         <div className="mt-2 flex gap-1.5">
           <span
             className="text-[9px] px-1.5 py-0.5 rounded font-mono"
-            style={{ background: "rgba(37,99,235,0.2)", color: "#93C5FD" }}
+            style={{ background: "rgba(217,119,6,0.2)", color: "#FCD34D" }}
           >
             variant
           </span>
@@ -202,7 +202,7 @@ export default function HeroIllustration() {
         <p className="text-[10px] font-mono mb-2.5" style={{ color: "rgba(255,255,255,0.35)" }}>tokens.ts</p>
         <div className="space-y-1.5">
           {[
-            { name: "primary", color: "#2563EB" },
+            { name: "primary", color: "#B45309" },
             { name: "surface", color: "#F8FAFC" },
             { name: "text", color: "#0F172A" },
           ].map(({ name, color }) => (
@@ -232,13 +232,20 @@ export default function HeroIllustration() {
           backdropFilter: "blur(12px)",
         }}
       >
-        <div className="relative w-8 h-8 flex-shrink-0">
-          <svg viewBox="0 0 36 36" className="w-8 h-8 -rotate-90">
-            <circle cx="18" cy="18" r="14" fill="none" stroke="#1E3A5F" strokeWidth="4" />
-            <circle cx="18" cy="18" r="14" fill="none" stroke={STATUS_BAR} strokeWidth="4"
-              strokeDasharray="88" strokeDashoffset="9" strokeLinecap="round" />
-          </svg>
-          <span className="absolute inset-0 flex items-center justify-center text-[9px] font-bold" style={{ color: "#93C5FD" }}>90</span>
+        <div
+          className="relative w-8 h-8 flex-shrink-0 rounded-full flex items-center justify-center"
+          style={{
+            background: "conic-gradient(#34D399 0% 90%, rgba(255,255,255,0.12) 90% 100%)",
+          }}
+        >
+          <div
+            className="w-6 h-6 rounded-full flex items-center justify-center"
+            style={{ background: "#1E1E1E" }}
+          >
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="none">
+              <path d="M13 2L3 14h7l-1 8 11-14h-7l1-6z" fill="#34D399" />
+            </svg>
+          </div>
         </div>
         <div>
           <p className="text-[11px] font-semibold" style={{ color: "rgba(255,255,255,0.75)" }}>Lighthouse</p>
@@ -256,16 +263,16 @@ export default function HeroIllustration() {
         }}
         className="hidden md:flex absolute -left-2 top-10 rounded-lg px-2.5 py-1.5 flex items-center gap-1.5 z-10"
         style={{
-          background: "rgba(0,122,204,0.15)",
-          border: "1px solid rgba(0,122,204,0.4)",
+          background: "rgba(217,119,6,0.15)",
+          border: "1px solid rgba(217,119,6,0.4)",
           backdropFilter: "blur(8px)",
         }}
       >
         <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
-          <rect x="0" y="0" width="7" height="8" rx="1" stroke="#93C5FD" strokeWidth="1.2" />
+          <rect x="0" y="0" width="7" height="8" rx="1" stroke="#FCD34D" strokeWidth="1.2" />
           <rect x="8.5" y="2" width="3.5" height="6" rx="0.8" stroke="#6B7280" strokeWidth="1.2" />
         </svg>
-        <span className="text-[10px] font-mono" style={{ color: "rgba(147,197,253,0.7)" }}>responsive</span>
+        <span className="text-[10px] font-mono" style={{ color: "rgba(252,211,77,0.7)" }}>responsive</span>
       </motion.div>
 
       {/* Decorative dots */}

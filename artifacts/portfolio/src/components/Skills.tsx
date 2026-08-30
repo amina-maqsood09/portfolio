@@ -58,7 +58,7 @@ function ProficiencyBar({ level, delay }: { level: number; delay: number }) {
   return (
     <div className="h-[3px] w-full bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
       <motion.div
-        className="h-full rounded-full bg-gradient-to-r from-blue-600 to-blue-400"
+        className="h-full rounded-full bg-gradient-to-r from-amber-600 to-amber-400"
         initial={{ width: 0 }}
         whileInView={{ width: `${level}%` }}
         viewport={{ once: true }}
@@ -96,12 +96,12 @@ export default function Skills() {
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.4, delay: idx * 0.06, ease: "easeOut" }}
               whileHover={{ y: -3 }}
-              className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-blue-200 dark:hover:border-slate-700 transition-all duration-200 cursor-default group flex flex-col"
+              className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-amber-200 dark:hover:border-slate-700 transition-all duration-200 cursor-default group flex flex-col"
             >
               {/* Header */}
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-3">
-                  <div className="p-2 rounded-lg bg-blue-50 dark:bg-blue-950/50 text-primary group-hover:scale-110 transition-transform duration-200">
+                  <div className="p-2 rounded-lg bg-amber-50 dark:bg-amber-950/50 text-primary group-hover:scale-110 transition-transform duration-200">
                     {category.icon}
                   </div>
                   <h3 className="text-[15px] font-display font-bold text-slate-900 dark:text-white">{category.title}</h3>

@@ -24,10 +24,10 @@ export default function Hero() {
       <div className="absolute inset-0 dot-grid pointer-events-none opacity-100 dark:opacity-40" />
 
       {/* ── Ambient glow blobs ── */}
-      <div className="absolute top-[-10%] left-[-5%] w-[600px] h-[600px] rounded-full bg-blue-500/8 dark:bg-blue-500/10 blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-[-5%] right-[-5%] w-[500px] h-[500px] rounded-full bg-indigo-500/6 dark:bg-indigo-500/8 blur-[100px] pointer-events-none" />
+      <div className="absolute top-[-10%] left-[-5%] w-[600px] h-[600px] rounded-full bg-amber-500/8 dark:bg-amber-500/10 blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-[-5%] right-[-5%] w-[500px] h-[500px] rounded-full bg-orange-500/6 dark:bg-orange-500/8 blur-[100px] pointer-events-none" />
       {/* Soft glow behind the headline */}
-      <div className="absolute top-[25%] left-[5%] w-[300px] h-[200px] rounded-full bg-blue-400/10 dark:bg-blue-400/12 blur-[80px] pointer-events-none" />
+      <div className="absolute top-[25%] left-[5%] w-[300px] h-[200px] rounded-full bg-amber-400/10 dark:bg-amber-400/12 blur-[80px] pointer-events-none" />
 
       <div className="container mx-auto px-6 md:px-12 relative z-10 py-12">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
@@ -38,12 +38,12 @@ export default function Hero() {
             {/* Availability badge */}
             <motion.div
               variants={itemVariants}
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 dark:bg-blue-950/60 border border-blue-200 dark:border-blue-800/60 text-blue-700 dark:text-blue-300 font-medium text-sm mb-8 shadow-sm"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-amber-50 dark:bg-amber-950/60 border border-amber-200 dark:border-amber-800/60 text-amber-700 dark:text-amber-300 font-medium text-sm mb-8 shadow-sm"
               data-testid="badge-availability"
             >
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-500 opacity-60" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500" />
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-500 opacity-60" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-500" />
               </span>
               Open for Internships &amp; Freelance Work
             </motion.div>
@@ -57,7 +57,7 @@ export default function Hero() {
               <br />
               <span
                 className="text-transparent bg-clip-text"
-                style={{ backgroundImage: "linear-gradient(135deg, #1D4ED8 0%, #2563EB 40%, #3B82F6 100%)" }}
+                style={{ backgroundImage: "linear-gradient(135deg, #B45309 0%, #D97706 40%, #F59E0B 100%)" }}
               >
                 Frontend Developer
               </span>
@@ -80,7 +80,7 @@ export default function Hero() {
                 href="#projects"
                 whileHover={{ scale: 1.02, y: -1 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center justify-center gap-2 bg-primary text-white px-7 py-3 rounded-lg font-semibold text-[15px] shadow-md shadow-blue-500/20 hover:shadow-lg hover:shadow-blue-500/30 hover:bg-blue-700 transition-all duration-200"
+                className="inline-flex items-center justify-center gap-2 bg-primary text-white px-7 py-3 rounded-lg font-semibold text-[15px] shadow-md shadow-amber-500/20 hover:shadow-lg hover:shadow-amber-500/30 hover:bg-amber-700 transition-all duration-200"
                 data-testid="btn-view-projects"
               >
                 View Projects <ArrowRight size={17} />
@@ -89,7 +89,7 @@ export default function Hero() {
                 href="#contact"
                 whileHover={{ scale: 1.02, y: -1 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center justify-center gap-2 bg-transparent text-slate-700 dark:text-slate-300 border border-slate-300 dark:border-slate-700 px-7 py-3 rounded-lg font-semibold text-[15px] hover:border-primary hover:text-primary hover:bg-blue-50 dark:hover:bg-blue-950/30 transition-all duration-200"
+                className="inline-flex items-center justify-center gap-2 bg-transparent text-slate-700 dark:text-slate-300 border border-slate-300 dark:border-slate-700 px-7 py-3 rounded-lg font-semibold text-[15px] hover:border-primary hover:text-primary hover:bg-amber-50 dark:hover:bg-amber-950/30 transition-all duration-200"
                 data-testid="btn-contact"
               >
                 Get in Touch <Mail size={17} />
@@ -102,10 +102,10 @@ export default function Hero() {
               className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-2 xl:grid-cols-4 gap-3"
             >
               {[
-                { label: "Projects Built", value: "15+", icon: <Code2 size={16} /> },
+                { label: "Projects Built", value: "18+", icon: <Code2 size={16} /> },
                 { label: "Current CGPA", value: "3.57", icon: <Terminal size={16} /> },
-                { label: "Certifications", value: "5",   icon: <Award size={16} /> },
-                { label: "Internships",    value: "2",   icon: <Briefcase size={16} /> },
+                { label: "Certifications", value: "5", icon: <Award size={16} /> },
+                { label: "Internships", value: "3", icon: <Briefcase size={16} /> },
               ].map((stat, i) => (
                 <motion.div
                   key={i}

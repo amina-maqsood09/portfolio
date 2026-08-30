@@ -3,9 +3,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Mail, MapPin, Phone, Linkedin, Github, Send, CheckCircle, AlertCircle, Loader } from "lucide-react";
 import emailjs from "@emailjs/browser";
 
-const EMAILJS_SERVICE_ID  = "service_b8m026x";
+const EMAILJS_SERVICE_ID = "service_b8m026x";
 const EMAILJS_TEMPLATE_ID = "template_eoqv3r6";
-const EMAILJS_PUBLIC_KEY  = "zdt7U3xUzKIF-t8lP";
+const EMAILJS_PUBLIC_KEY = "zdt7U3xUzKIF-t8lP";
 
 function XIcon({ size = 20 }: { size?: number }) {
   return (
@@ -48,9 +48,9 @@ export default function Contact() {
   };
 
   const socialLinks = [
-    { href: "https://linkedin.com/in/amina-maqsood09",  label: "LinkedIn",    icon: <Linkedin size={19} />,  testId: "link-linkedin" },
-    { href: "https://github.com/amina-maqsood09",        label: "GitHub",      icon: <Github size={19} />,    testId: "link-github" },
-    { href: "https://x.com/AmnaMaqsood09",               label: "X (Twitter)", icon: <XIcon size={19} />,     testId: "link-twitter" },
+    { href: "https://linkedin.com/in/amina-maqsood09", label: "LinkedIn", icon: <Linkedin size={19} />, testId: "link-linkedin" },
+    { href: "https://github.com/amina-maqsood09", label: "GitHub", icon: <Github size={19} />, testId: "link-github" },
+    { href: "https://x.com/AmnaMaqsood09", label: "X (Twitter)", icon: <XIcon size={19} />, testId: "link-twitter" },
   ];
 
   return (
@@ -81,10 +81,10 @@ export default function Contact() {
             {/* Email */}
             <a
               href="mailto:amnamaqsood931@gmail.com"
-              className="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-primary/50 hover:shadow-md hover:shadow-blue-500/8 transition-all duration-200 group"
+              className="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-primary/50 hover:shadow-md hover:shadow-amber-500/8 transition-all duration-200 group"
               data-testid="link-email"
             >
-              <div className="w-11 h-11 rounded-xl bg-blue-50 dark:bg-blue-950/50 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-200 flex-shrink-0">
+              <div className="w-11 h-11 rounded-xl bg-amber-50 dark:bg-amber-950/50 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-200 flex-shrink-0">
                 <Mail size={19} />
               </div>
               <div className="min-w-0">
@@ -98,10 +98,10 @@ export default function Contact() {
               href="https://wa.me/923414430561"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-primary/50 hover:shadow-md hover:shadow-blue-500/8 transition-all duration-200 group"
+              className="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-primary/50 hover:shadow-md hover:shadow-amber-500/8 transition-all duration-200 group"
               data-testid="link-phone"
             >
-              <div className="w-11 h-11 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 group-hover:bg-blue-50 dark:group-hover:bg-blue-950/50 group-hover:text-primary group-hover:scale-110 transition-all duration-200 flex-shrink-0">
+              <div className="w-11 h-11 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 group-hover:bg-amber-50 dark:group-hover:bg-amber-950/50 group-hover:text-primary group-hover:scale-110 transition-all duration-200 flex-shrink-0">
                 <Phone size={19} />
               </div>
               <div>
@@ -112,7 +112,7 @@ export default function Contact() {
 
             {/* Location */}
             <div className="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
-              <div className="w-11 h-11 rounded-xl bg-blue-50 dark:bg-blue-950/50 flex items-center justify-center text-primary flex-shrink-0">
+              <div className="w-11 h-11 rounded-xl bg-amber-50 dark:bg-amber-950/50 flex items-center justify-center text-primary flex-shrink-0">
                 <MapPin size={19} />
               </div>
               <div>
@@ -132,7 +132,7 @@ export default function Contact() {
                   aria-label={link.label}
                   whileHover={{ scale: 1.08, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-11 h-11 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary/50 hover:bg-blue-50 dark:hover:bg-blue-950/30 hover:shadow-sm transition-all duration-200"
+                  className="w-11 h-11 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary/50 hover:bg-amber-50 dark:hover:bg-amber-950/30 hover:shadow-sm transition-all duration-200"
                   data-testid={link.testId}
                 >
                   {link.icon}
@@ -141,7 +141,7 @@ export default function Contact() {
             </div>
 
             {/* Response note */}
-            <div className="p-4 rounded-xl bg-blue-50/80 dark:bg-blue-950/30 border border-blue-200/70 dark:border-blue-800/50">
+            <div className="p-4 rounded-xl bg-amber-50/80 dark:bg-amber-950/30 border border-amber-200/70 dark:border-amber-800/50">
               <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
                 <span className="text-primary font-semibold">Response time:</span> I typically reply within 24 hours. For urgent matters, reach me directly by email or WhatsApp.
               </p>
@@ -226,7 +226,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={status === "sending"}
-                    className="w-full flex items-center justify-center gap-2 bg-primary text-white font-semibold py-3 rounded-lg hover:bg-blue-700 shadow-sm shadow-blue-500/20 hover:shadow-md hover:shadow-blue-500/30 transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed text-[15px]"
+                    className="w-full flex items-center justify-center gap-2 bg-primary text-white font-semibold py-3 rounded-lg hover:bg-amber-700 shadow-sm shadow-amber-500/20 hover:shadow-md hover:shadow-amber-500/30 transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed text-[15px]"
                     data-testid="btn-send-message"
                   >
                     {status === "sending" ? (
