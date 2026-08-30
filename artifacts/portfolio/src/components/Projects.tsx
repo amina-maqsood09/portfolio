@@ -56,14 +56,23 @@ const featuredProjects = [
     demoLink: "https://github.com/amina-maqsood09/product-list-app",
     githubLink: "https://github.com/amina-maqsood09/product-list-app",
   },
-  {
-    title: "FlyRank AI Capstone",
-    description: "Capstone project built during the FlyRank AI internship — an AI-powered web application integrating intelligent frontend features and dynamic UI components for real-world production use.",
+   {
+    title: "UXLens AI",
+    description: "AI-powered UX reviewer that analyzes any live website, flags usability and accessibility issues, and generates actionable design improvement recommendations using computer vision and the Gemini API.",
     gradient: "from-blue-950 via-blue-900 to-slate-900",
-    symbol: "AI",
-    tags: ["React", "AI Integration", "TypeScript"],
-    demoLink: "https://github.com/amina-maqsood09/flyrank-capstone",
-    githubLink: "https://github.com/amina-maqsood09/flyrank-capstone",
+    symbol: "UX",
+    tags: ["React", "Node.js", "Puppeteer", "Gemini API"],
+    demoLink: "https://uxlens-ai-server.vercel.app",
+    githubLink: "https://github.com/amina-maqsood09/uxlens-ai",
+  },
+  {
+    title: "FluentBuddy AI",
+    description: "An AI-powered English learning companion with conversational practice, instant feedback, and progress tracking, built with the Gemini API and Firebase.",
+    gradient: "from-slate-900 via-blue-950 to-blue-900",
+    symbol: "EN",
+    tags: ["React", "TypeScript", "Firebase", "Gemini API"],
+    demoLink: "https://fluentbuddy-ai.vercel.app",
+    githubLink: "https://github.com/amina-maqsood09/fluentbuddy-ai",
   },
 ];
 
