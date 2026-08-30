@@ -154,6 +154,9 @@ importers:
 
   .:
     dependencies:
+      '@vercel/analytics':
+        specifier: ^2.0.1
+        version: 2.0.1(react@19.1.0)
       framer-motion:
         specifier: ^13.1.1
         version: 13.1.1(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -353,9 +356,6 @@ importers:
       '@emailjs/browser':
         specifier: ^4.4.1
         version: 4.4.1
-      '@vercel/analytics':
-        specifier: ^2.0.1
-        version: 2.0.1(react@19.1.0)
     devDependencies:
       '@hookform/resolvers':
         specifier: ^3.10.0
