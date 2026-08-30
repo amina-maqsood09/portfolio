@@ -138,7 +138,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.65, delay: 0.45 }}
-          className="lg:hidden relative h-[260px] mt-10"
+          className="lg:hidden relative min-h-[400px] mt-14"
         >
           <HeroIllustration />
         </motion.div>
