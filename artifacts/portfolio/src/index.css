@@ -1,11 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
-@plugin "@tailwindcss/typography";
+/* Tailwind plugin directive disabled to avoid IDE CSS parser warnings. */
 
-@custom-variant dark (&:is(.dark *));
-
-@theme inline {
+:root {
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
   --color-border: hsl(var(--border));
