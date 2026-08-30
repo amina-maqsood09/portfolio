@@ -81,7 +81,7 @@ const academicProjects = [
   { title: "End-to-End Encrypted Chat", description: "Secure multi-client chat with AES-256 encryption, RSA-2048 key exchange, and SHA-256 digital signatures.", tags: ["Python", "AES-256", "RSA-2048"] },
   { title: "University Complaint Management System", description: "Desktop application for managing student complaints with an intuitive GUI interface and a robust SQL backend.", tags: ["Java", "OOP", "SQL", "GUI"] },
   { title: "NETSOL Enterprise Network", description: "3-layer hierarchical network with 7 VLANs, OSPF routing, DHCP/DNS, and ASA 5505 firewall. Built as a team of 4.", tags: ["Cisco Packet Tracer", "OSPF", "VLANs", "Networking"] },
-  { title: "UX Lens AI Capstone", description: "AI-powered UX analysis tool that evaluates user interfaces, highlights accessibility issues, and generates actionable design improvement recommendations.", tags: ["Python", "AI/ML", "UX Analysis"] },
+
   { title: "Vision AI — Image Classification", description: "Deep learning image classification system trained to identify and categorise visual content using convolutional neural networks and transfer learning techniques.", tags: ["Python", "TensorFlow", "CNN", "Computer Vision"] },
   { title: "Fire Brigade Robot", description: "Autonomous fire-detecting and extinguishing robot using flame sensors, servo motors, and microcontroller logic to navigate towards and suppress fire sources.", tags: ["Arduino", "C++", "Robotics", "Sensors"] },
 ];
