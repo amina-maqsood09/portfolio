@@ -22,15 +22,6 @@ const experiences = [
     current: false,
   },
   {
-    role: "AI/Machine Learning Intern",
-    company: "Zynvex Solutions",
-    period: "15 Jul 2026 – 23 Aug 2026",
-    location: "Remote",
-    description: "Completed a 6-week AI/ML internship program covering exploratory data analysis, regression modeling, and deep learning, including EDA on an NYC Airbnb dataset, a regression model on a medical insurance cost dataset, and a deep learning customer churn prediction model built with Keras. Certificate: ZYNVEX-CERT-0481 (online verifiable).",
-    tags: ["Python", "Pandas", "Keras", "Machine Learning"],
-    current: false,
-  },
-  {
     role: "Frontend Development Intern",
     company: "CodeAlpha",
     period: "Jun 2026 – Jul 2026",
@@ -43,7 +34,7 @@ const experiences = [
 
 export default function Experience() {
   return (
-    <section id="experience" className="py-24 md:py-28 relative" data-testid="section-experience">
+    <section id="experience" className="py-24 md:py-28 relative scroll-mt-24" data-testid="section-experience">
       <div className="container mx-auto px-6 md:px-12">
 
         <motion.div

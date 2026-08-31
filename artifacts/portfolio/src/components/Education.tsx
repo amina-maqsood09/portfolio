@@ -17,7 +17,7 @@ export default function Education() {
   ];
 
   return (
-    <section id="education" className="py-24 md:py-28 relative" data-testid="section-education">
+    <section id="education" className="py-24 md:py-28 relative scroll-mt-24" data-testid="section-education">
       <div className="container mx-auto px-6 md:px-12">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
 

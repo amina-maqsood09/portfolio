@@ -85,7 +85,7 @@ const academicProjects = [
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-24 md:py-28 bg-slate-50/70 dark:bg-muted/20" data-testid="section-projects">
+    <section id="projects" className="py-24 md:py-28 bg-slate-50/70 dark:bg-muted/20 scroll-mt-24" data-testid="section-projects">
       <div className="container mx-auto px-6 md:px-12">
 
         <motion.div

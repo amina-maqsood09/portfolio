@@ -58,7 +58,7 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-24 md:py-28 bg-slate-50/70 dark:bg-muted/20 border-t border-border" data-testid="section-contact">
+    <section id="contact" className="py-24 md:py-28 bg-slate-50/70 dark:bg-muted/20 border-t border-border scroll-mt-24" data-testid="section-contact">
       <div className="container mx-auto px-6 md:px-12">
 
         {/* Header */}

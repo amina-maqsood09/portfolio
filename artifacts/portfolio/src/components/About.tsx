@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section id="about" className="py-24 md:py-28 relative overflow-hidden" data-testid="section-about">
+    <section id="about" className="py-24 md:py-28 relative overflow-hidden scroll-mt-24" data-testid="section-about">
       {/* Subtle background accent */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-violet-500/5 dark:bg-violet-500/8 rounded-full blur-[120px] pointer-events-none" />
 

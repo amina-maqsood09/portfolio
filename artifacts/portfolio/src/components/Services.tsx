@@ -12,7 +12,7 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-24" data-testid="section-services">
+    <section id="services" className="py-24 scroll-mt-24" data-testid="section-services">
       <div className="container mx-auto px-6 md:px-12">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

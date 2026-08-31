@@ -70,7 +70,7 @@ function ProficiencyBar({ level, delay }: { level: number; delay: number }) {
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 md:py-28 bg-slate-50/70 dark:bg-muted/20" data-testid="section-skills">
+    <section id="skills" className="py-24 md:py-28 bg-slate-50/70 dark:bg-muted/20 scroll-mt-24" data-testid="section-skills">
       <div className="container mx-auto px-6 md:px-12">
 
         <motion.div

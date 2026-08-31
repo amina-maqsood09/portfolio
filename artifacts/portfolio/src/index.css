@@ -7,7 +7,7 @@
    ThemeProvider), instead of the browser default which follows the OS
    prefers-color-scheme setting. Without this, dark: utilities and the
    in-app light/dark toggle can disagree and text/backgrounds mismatch. */
-/* @custom-variant dark (&:is(.dark *)); */
+@custom-variant dark (&:is(.dark *));
 
 :root {
   --color-background: hsl(var(--background));
@@ -63,7 +63,7 @@
   /* #0A0A12 deep black-navy */
   --foreground: 260 30% 95%;
   /* #F3F1F9 near-white, purple tint */
-  --border: 258 20% 16%;
+  --border: 258 22% 24%;
   /* subtle violet-tinted border */
   --input: 258 20% 16%;
   --ring: 271 91% 65%;
