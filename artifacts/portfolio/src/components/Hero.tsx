@@ -60,7 +60,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-[100dvh] flex items-center pt-20 overflow-hidden bg-white dark:bg-background"
+      className="relative min-h-[100dvh] flex items-center pt-28 sm:pt-28 lg:pt-20 overflow-hidden bg-white dark:bg-background"
       data-testid="section-hero"
     >
       {/* Dot grid */}
@@ -74,7 +74,7 @@ export default function Hero() {
       {/* Soft glow behind headline */}
       <div className="absolute top-[25%] left-[5%] w-[300px] h-[200px] rounded-full bg-green-400/10 dark:bg-green-400/12 blur-[80px] pointer-events-none" />
 
-      <div className="container mx-auto px-6 md:px-12 relative z-10 py-10 lg:py-12">
+      <div className="container mx-auto px-6 md:px-12 relative z-10 py-8 sm:py-10 lg:py-12">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-8 items-center">
 
           {/* =====================================================
