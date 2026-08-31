@@ -161,7 +161,7 @@ export default function HeroIllustration() {
         <div
           className="w-full h-7 rounded-md flex items-center justify-center text-[11px] font-semibold text-white"
           style={{
-            background: "linear-gradient(135deg, #7C3AED, #A855F7)",
+            background: "linear-gradient(135deg, #16A34A, #22C55E)",
             boxShadow: "0 4px 14px rgba(217,119,6,0.5)",
           }}
         >
@@ -170,7 +170,7 @@ export default function HeroIllustration() {
         <div className="mt-2 flex gap-1.5">
           <span
             className="text-[9px] px-1.5 py-0.5 rounded font-mono"
-            style={{ background: "rgba(217,119,6,0.2)", color: "#C084FC" }}
+            style={{ background: "rgba(217,119,6,0.2)", color: "#4ADE80" }}
           >
             variant
           </span>
@@ -202,7 +202,7 @@ export default function HeroIllustration() {
         <p className="text-[10px] font-mono mb-2.5" style={{ color: "rgba(255,255,255,0.35)" }}>tokens.ts</p>
         <div className="space-y-1.5">
           {[
-            { name: "primary", color: "#7C3AED" },
+            { name: "primary", color: "#16A34A" },
             { name: "surface", color: "#F8FAFC" },
             { name: "text", color: "#0F172A" },
           ].map(({ name, color }) => (
@@ -269,7 +269,7 @@ export default function HeroIllustration() {
         }}
       >
         <svg width="12" height="10" viewBox="0 0 12 10" fill="none">
-          <rect x="0" y="0" width="7" height="8" rx="1" stroke="#C084FC" strokeWidth="1.2" />
+          <rect x="0" y="0" width="7" height="8" rx="1" stroke="#4ADE80" strokeWidth="1.2" />
           <rect x="8.5" y="2" width="3.5" height="6" rx="0.8" stroke="#6B7280" strokeWidth="1.2" />
         </svg>
         <span className="text-[10px] font-mono" style={{ color: "rgba(252,211,77,0.7)" }}>responsive</span>

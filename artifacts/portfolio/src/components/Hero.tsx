@@ -24,10 +24,10 @@ export default function Hero() {
       <div className="absolute inset-0 dot-grid pointer-events-none opacity-100 dark:opacity-40" />
 
       {/* ── Ambient glow blobs ── */}
-      <div className="absolute top-[-10%] left-[-5%] w-[600px] h-[600px] rounded-full bg-violet-500/8 dark:bg-violet-500/10 blur-[120px] pointer-events-none" />
+      <div className="absolute top-[-10%] left-[-5%] w-[600px] h-[600px] rounded-full bg-green-500/8 dark:bg-green-500/10 blur-[120px] pointer-events-none" />
       <div className="absolute bottom-[-5%] right-[-5%] w-[500px] h-[500px] rounded-full bg-orange-500/6 dark:bg-orange-500/8 blur-[100px] pointer-events-none" />
       {/* Soft glow behind the headline */}
-      <div className="absolute top-[25%] left-[5%] w-[300px] h-[200px] rounded-full bg-violet-400/10 dark:bg-violet-400/12 blur-[80px] pointer-events-none" />
+      <div className="absolute top-[25%] left-[5%] w-[300px] h-[200px] rounded-full bg-green-400/10 dark:bg-green-400/12 blur-[80px] pointer-events-none" />
 
       <div className="container mx-auto px-6 md:px-12 relative z-10 py-12">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
@@ -38,12 +38,12 @@ export default function Hero() {
             {/* Availability badge */}
             <motion.div
               variants={itemVariants}
-              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-violet-50 dark:bg-violet-950/60 border border-violet-200 dark:border-violet-800/60 text-violet-700 dark:text-violet-300 font-medium text-sm mb-8 shadow-sm"
+              className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-green-50 dark:bg-green-950/60 border border-green-200 dark:border-green-800/60 text-green-700 dark:text-green-300 font-medium text-sm mb-8 shadow-sm"
               data-testid="badge-availability"
             >
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-violet-500 opacity-60" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-violet-500" />
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-60" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500" />
               </span>
               Open for Internships &amp; Freelance Work
             </motion.div>
@@ -57,7 +57,7 @@ export default function Hero() {
               <br />
               <span
                 className="text-transparent bg-clip-text"
-                style={{ backgroundImage: "linear-gradient(135deg, #7C3AED 0%, #A855F7 40%, #A855F7 100%)" }}
+                style={{ backgroundImage: "linear-gradient(135deg, #16A34A 0%, #22C55E 40%, #22C55E 100%)" }}
               >
                 Frontend Developer
               </span>
@@ -80,8 +80,8 @@ export default function Hero() {
                 href="#projects"
                 whileHover={{ scale: 1.02, y: -1 }}
                 whileTap={{ scale: 0.98 }}
-                style={{ backgroundColor: "#7C3AED", color: "#F6F3FC" }}
-                className="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-lg font-semibold text-[15px] shadow-md shadow-violet-500/20 hover:shadow-lg hover:shadow-violet-500/30 hover:brightness-110 transition-all duration-200"
+                style={{ backgroundColor: "#16A34A", color: "#F6F3FC" }}
+                className="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-lg font-semibold text-[15px] shadow-md shadow-green-500/20 hover:shadow-lg hover:shadow-green-500/30 hover:brightness-110 transition-all duration-200"
                 data-testid="btn-view-projects"
               >
                 View Projects <ArrowRight size={17} />
@@ -90,7 +90,7 @@ export default function Hero() {
                 href="#contact"
                 whileHover={{ scale: 1.02, y: -1 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center justify-center gap-2 bg-transparent text-foreground border border-border px-7 py-3 rounded-lg font-semibold text-[15px] hover:border-primary hover:text-primary hover:bg-violet-50 dark:hover:bg-violet-950/30 transition-all duration-200"
+                className="inline-flex items-center justify-center gap-2 bg-transparent text-foreground border border-border px-7 py-3 rounded-lg font-semibold text-[15px] hover:border-primary hover:text-primary hover:bg-green-50 dark:hover:bg-green-950/30 transition-all duration-200"
                 data-testid="btn-contact"
               >
                 Get in Touch <Mail size={17} />

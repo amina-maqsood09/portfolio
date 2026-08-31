@@ -85,10 +85,10 @@ export default function Contact() {
             {/* Email */}
             <a
               href="mailto:amnamaqsood931@gmail.com"
-              className="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 border border-border hover:border-primary/50 hover:shadow-md hover:shadow-violet-500/8 transition-all duration-200 group"
+              className="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 border border-border hover:border-primary/50 hover:shadow-md hover:shadow-green-500/8 transition-all duration-200 group"
               data-testid="link-email"
             >
-              <div className="w-11 h-11 rounded-xl bg-violet-50 dark:bg-violet-950/50 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-200 flex-shrink-0">
+              <div className="w-11 h-11 rounded-xl bg-green-50 dark:bg-green-950/50 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-200 flex-shrink-0">
                 <Mail size={19} />
               </div>
               <div className="min-w-0">
@@ -102,10 +102,10 @@ export default function Contact() {
               href="https://wa.me/923414430561"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 border border-border hover:border-primary/50 hover:shadow-md hover:shadow-violet-500/8 transition-all duration-200 group"
+              className="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 border border-border hover:border-primary/50 hover:shadow-md hover:shadow-green-500/8 transition-all duration-200 group"
               data-testid="link-phone"
             >
-              <div className="w-11 h-11 rounded-xl bg-muted flex items-center justify-center text-muted-foreground group-hover:bg-violet-50 dark:group-hover:bg-violet-950/50 group-hover:text-primary group-hover:scale-110 transition-all duration-200 flex-shrink-0">
+              <div className="w-11 h-11 rounded-xl bg-muted flex items-center justify-center text-muted-foreground group-hover:bg-green-50 dark:group-hover:bg-green-950/50 group-hover:text-primary group-hover:scale-110 transition-all duration-200 flex-shrink-0">
                 <Phone size={19} />
               </div>
               <div>
@@ -116,7 +116,7 @@ export default function Contact() {
 
             {/* Location */}
             <div className="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 border border-border">
-              <div className="w-11 h-11 rounded-xl bg-violet-50 dark:bg-violet-950/50 flex items-center justify-center text-primary flex-shrink-0">
+              <div className="w-11 h-11 rounded-xl bg-green-50 dark:bg-green-950/50 flex items-center justify-center text-primary flex-shrink-0">
                 <MapPin size={19} />
               </div>
               <div>
@@ -136,7 +136,7 @@ export default function Contact() {
                   aria-label={link.label}
                   whileHover={{ scale: 1.08, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-11 h-11 rounded-xl bg-white dark:bg-slate-900 border border-border flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary/50 hover:bg-violet-50 dark:hover:bg-violet-950/30 hover:shadow-sm transition-all duration-200"
+                  className="w-11 h-11 rounded-xl bg-white dark:bg-slate-900 border border-border flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary/50 hover:bg-green-50 dark:hover:bg-green-950/30 hover:shadow-sm transition-all duration-200"
                   data-testid={link.testId}
                 >
                   {link.icon}
@@ -145,7 +145,7 @@ export default function Contact() {
             </div>
 
             {/* Response note */}
-            <div className="p-4 rounded-xl bg-violet-50/80 dark:bg-violet-950/30 border border-violet-200/70 dark:border-violet-800/50">
+            <div className="p-4 rounded-xl bg-green-50/80 dark:bg-green-950/30 border border-green-200/70 dark:border-green-800/50">
               <p className="text-sm text-muted-foreground leading-relaxed">
                 <span className="text-primary font-semibold">Response time:</span> I typically reply within 24 hours. For urgent matters, reach me directly by email or WhatsApp.
               </p>
@@ -230,7 +230,7 @@ export default function Contact() {
                   <button
                     type="submit"
                     disabled={status === "sending"}
-                    className="w-full flex items-center justify-center gap-2 bg-primary text-white font-semibold py-3 rounded-lg hover:bg-violet-700 shadow-sm shadow-violet-500/20 hover:shadow-md hover:shadow-violet-500/30 transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed text-[15px]"
+                    className="w-full flex items-center justify-center gap-2 bg-primary text-white font-semibold py-3 rounded-lg hover:bg-green-700 shadow-sm shadow-green-500/20 hover:shadow-md hover:shadow-green-500/30 transition-all duration-200 disabled:opacity-60 disabled:cursor-not-allowed text-[15px]"
                     data-testid="btn-send-message"
                   >
                     {status === "sending" ? (

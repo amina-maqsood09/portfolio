@@ -30,7 +30,7 @@ export default function Education() {
               transition={{ duration: 0.5 }}
               className="flex items-center gap-3 mb-10"
             >
-              <div className="p-2 rounded-lg bg-violet-50 dark:bg-violet-950/50">
+              <div className="p-2 rounded-lg bg-green-50 dark:bg-green-950/50">
                 <GraduationCap className="w-5 h-5 text-primary" />
               </div>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">Education</h2>
@@ -46,13 +46,13 @@ export default function Education() {
                   transition={{ duration: 0.45, delay: idx * 0.1 }}
                   className="relative"
                 >
-                  <div className={`absolute -left-[27px] top-5 w-6 h-6 rounded-full flex items-center justify-center ring-4 ring-white dark:ring-background shadow-sm ${edu.highlight ? "bg-primary text-white shadow-violet-500/25" : "bg-muted text-muted-foreground border border-border"}`}>
+                  <div className={`absolute -left-[27px] top-5 w-6 h-6 rounded-full flex items-center justify-center ring-4 ring-white dark:ring-background shadow-sm ${edu.highlight ? "bg-primary text-white shadow-green-500/25" : "bg-muted text-muted-foreground border border-border"}`}>
                     {edu.icon}
                   </div>
                   <motion.div
                     whileHover={{ x: 3 }}
                     transition={{ type: "spring", stiffness: 320, damping: 26 }}
-                    className={`p-5 rounded-xl border transition-all duration-200 ${edu.highlight ? "border-violet-200 dark:border-violet-800/60 bg-violet-50/50 dark:bg-violet-950/20 shadow-sm shadow-violet-500/8" : "border-border bg-white dark:bg-slate-900 hover:border-violet-200 dark:hover:border-slate-700 hover:shadow-sm"}`}
+                    className={`p-5 rounded-xl border transition-all duration-200 ${edu.highlight ? "border-green-200 dark:border-green-800/60 bg-green-50/50 dark:bg-green-950/20 shadow-sm shadow-green-500/8" : "border-border bg-white dark:bg-slate-900 hover:border-green-200 dark:hover:border-slate-700 hover:shadow-sm"}`}
                   >
                     <div className="flex items-start justify-between gap-3 mb-1.5 flex-wrap">
                       <h3 className="font-bold text-[15px] leading-tight text-foreground">{edu.degree}</h3>
@@ -75,7 +75,7 @@ export default function Education() {
               transition={{ duration: 0.5, delay: 0.1 }}
               className="flex items-center gap-3 mb-10"
             >
-              <div className="p-2 rounded-lg bg-violet-50 dark:bg-violet-950/50">
+              <div className="p-2 rounded-lg bg-green-50 dark:bg-green-950/50">
                 <Trophy className="w-5 h-5 text-primary" />
               </div>
               <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground">Certifications</h2>
@@ -90,11 +90,11 @@ export default function Education() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: idx * 0.09 }}
                   whileHover={{ y: -2 }}
-                  className="p-5 rounded-xl bg-white dark:bg-slate-900 border border-border border-l-4 border-l-violet-500 hover:shadow-md hover:shadow-violet-500/8 hover:border-violet-200 dark:hover:border-slate-700 transition-all duration-200"
+                  className="p-5 rounded-xl bg-white dark:bg-slate-900 border border-border border-l-4 border-l-green-500 hover:shadow-md hover:shadow-green-500/8 hover:border-green-200 dark:hover:border-slate-700 transition-all duration-200"
                 >
                   <div className="flex items-start justify-between gap-3 mb-1.5 flex-wrap">
                     <div className="flex items-start gap-3">
-                      <div className="mt-0.5 p-1.5 rounded-lg bg-violet-50 dark:bg-violet-950/50 flex-shrink-0">
+                      <div className="mt-0.5 p-1.5 rounded-lg bg-green-50 dark:bg-green-950/50 flex-shrink-0">
                         <Award className="w-3.5 h-3.5 text-primary" />
                       </div>
                       <h3 className="font-bold text-[15px] leading-tight text-foreground">{cert.title}</h3>

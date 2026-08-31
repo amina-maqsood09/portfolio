@@ -61,38 +61,38 @@
   --radius: 0.75rem;
 
   /* ── Dark Mode (default) — Deep Black-Navy + Electric Violet ── */
-  --background: 249 33% 6%;
+  --background: 150 25% 5%;
   /* #0A0A12 deep black-navy */
-  --foreground: 260 30% 95%;
+  --foreground: 140 25% 95%;
   /* #F3F1F9 near-white, purple tint */
-  --border: 258 22% 24%;
+  --border: 145 20% 22%;
   /* subtle violet-tinted border */
-  --input: 258 20% 16%;
-  --ring: 271 91% 65%;
+  --input: 145 18% 14%;
+  --ring: 141 71% 60%;
 
-  --card: 249 26% 11%;
+  --card: 150 20% 9%;
   /* #14141F surface, lighter than bg */
-  --card-foreground: 260 30% 95%;
-  --card-border: 258 20% 18%;
+  --card-foreground: 140 25% 95%;
+  --card-border: 145 18% 16%;
 
-  --popover: 249 26% 11%;
-  --popover-foreground: 260 30% 95%;
-  --popover-border: 258 20% 18%;
+  --popover: 150 20% 9%;
+  --popover-foreground: 140 25% 95%;
+  --popover-border: 145 18% 16%;
 
-  --primary: 271 91% 65%;
+  --primary: 141 71% 60%;
   /* #A855F7 electric violet */
-  --primary-foreground: 260 30% 97%;
+  --primary-foreground: 140 25% 97%;
 
-  --secondary: 258 12% 55%;
+  --secondary: 145 10% 55%;
   /* #9B96B0 soft grey-purple */
-  --secondary-foreground: 249 33% 8%;
+  --secondary-foreground: 150 25% 7%;
 
-  --muted: 255 18% 14%;
-  --muted-foreground: 258 12% 65%;
+  --muted: 145 16% 12%;
+  --muted-foreground: 145 10% 62%;
   /* #9B96B0 muted text, verified 4.5:1+ on both bg/card */
 
-  --accent: 255 18% 16%;
-  --accent-foreground: 280 91% 78%;
+  --accent: 145 16% 14%;
+  --accent-foreground: 150 71% 72%;
   /* #C084FC lighter accent for highlights */
 
   --destructive: 0 72% 58%;
@@ -105,9 +105,9 @@
   --destructive-border: hsl(var(--destructive));
 
   /* Raw hex references for gradients / non-Tailwind uses (kept in sync with above) */
-  --violet-500: #A855F7;
-  --violet-600: #7C3AED;
-  --violet-400: #C084FC;
+  --green-500: #22C55E;
+  --green-600: #16A34A;
+  --green-400: #4ADE80;
 }
 
 /* Dark mode uses the :root values above directly — no .dark ruleset needed.
@@ -116,39 +116,39 @@
 
 .light {
   /* ── Light Mode — Violet-toned refresh (same family, light surface) ── */
-  --background: 260 45% 97%;
+  --background: 140 35% 96%;
   /* #F6F3FC soft lavender-white canvas */
-  --foreground: 258 35% 12%;
+  --foreground: 150 30% 8%;
   /* #1C1730 deep violet-charcoal text */
-  --border: 260 25% 88%;
+  --border: 145 20% 84%;
   /* #DFD9F0 lavender border */
-  --input: 260 25% 88%;
-  --ring: 271 81% 56%;
+  --input: 145 20% 84%;
+  --ring: 142 71% 32%;
 
   --card: 0 0% 100%;
   /* #FFFFFF card pops off lavender canvas */
-  --card-foreground: 258 35% 12%;
-  --card-border: 260 25% 90%;
+  --card-foreground: 150 30% 8%;
+  --card-border: 145 20% 86%;
 
   --popover: 0 0% 100%;
-  --popover-foreground: 258 35% 12%;
-  --popover-border: 260 25% 90%;
+  --popover-foreground: 150 30% 8%;
+  --popover-border: 145 20% 86%;
 
-  --primary: 271 81% 56%;
+  --primary: 142 71% 32%;
   /* #7C3AED deep violet, AA-safe on white and lavender */
-  --primary-foreground: 260 45% 98%;
+  --primary-foreground: 140 35% 98%;
 
-  --secondary: 258 15% 42%;
+  --secondary: 145 12% 36%;
   /* deeper grey-purple, readable on light */
-  --secondary-foreground: 260 45% 98%;
+  --secondary-foreground: 140 35% 98%;
 
-  --muted: 260 30% 93%;
-  --muted-foreground: 258 15% 38%;
+  --muted: 140 25% 90%;
+  --muted-foreground: 145 12% 34%;
   /* darker than dark-mode muted, so it still clears 4.5:1 on light bg */
 
-  --accent: 268 55% 91%;
+  --accent: 150 45% 87%;
   /* soft violet tint, visible on lavender (not pale) */
-  --accent-foreground: 271 81% 40%;
+  --accent-foreground: 142 71% 24%;
 
   --destructive: 0 72% 51%;
   --destructive-foreground: 0 0% 100%;
@@ -159,9 +159,9 @@
   --accent-border: hsl(var(--accent));
   --destructive-border: hsl(var(--destructive));
 
-  --violet-500: #7C3AED;
-  --violet-600: #6D28D9;
-  --violet-400: #A855F7;
+  --green-600: #16A34A;
+  --green-700: #15803D;
+  --green-500: #22C55E;
 }
 
 @layer base {
