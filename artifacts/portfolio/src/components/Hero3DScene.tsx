@@ -60,6 +60,8 @@ function TechShapes({ colorIndex }: { colorIndex: number }) {
         return () => window.removeEventListener("pointermove", handlePointerMove);
     }, []);
 
+    const orbitGroupRef = useRef<THREE.Group>(null);
+
     useFrame((_, delta) => {
         if (groupRef.current) {
             groupRef.current.rotation.y += delta * 0.16;
@@ -76,23 +78,46 @@ function TechShapes({ colorIndex }: { colorIndex: number }) {
             icoRef.current.rotation.y -= delta * 0.22;
             icoRef.current.rotation.x -= delta * 0.12;
         }
+        if (orbitGroupRef.current) {
+            orbitGroupRef.current.rotation.y += delta * 0.4;
+            orbitGroupRef.current.rotation.z += delta * 0.18;
+        }
     });
 
     return (
-        <group ref={groupRef}>
-            <mesh ref={cubeRef} position={[0.8, 0.25, 0]}>
-                <boxGeometry args={[1.3, 1.3, 1.3]} />
+        <group ref={groupRef} scale={0.78}>
+            <mesh ref={cubeRef} position={[0.95, 0.35, -0.2]}>
+                <boxGeometry args={[1.15, 1.15, 1.15]} />
                 <meshStandardMaterial map={codeTexture} roughness={0.55} metalness={0.15} />
             </mesh>
 
-            <lineSegments ref={icoRef} position={[-1.1, -0.35, 0.2]} scale={0.95}>
+            <lineSegments ref={icoRef} position={[-1.15, -0.5, 0.1]} scale={0.85}>
                 <primitive object={icoEdges} attach="geometry" />
                 <lineBasicMaterial color={color} linewidth={1.5} />
             </lineSegments>
-            <mesh position={[-1.1, -0.35, 0.2]} scale={0.95}>
+            <mesh position={[-1.15, -0.5, 0.1]} scale={0.85}>
                 <icosahedronGeometry args={[1, 0]} />
                 <meshBasicMaterial color={color} transparent opacity={0.06} />
             </mesh>
+
+            <group ref={orbitGroupRef} position={[-0.05, 1.15, 1.1]} scale={1.15}>
+                <mesh>
+                    <sphereGeometry args={[0.16, 24, 24]} />
+                    <meshStandardMaterial color={color} emissive={color} emissiveIntensity={0.9} roughness={0.3} />
+                </mesh>
+                <mesh rotation={[Math.PI / 2.2, 0, 0]}>
+                    <torusGeometry args={[0.55, 0.014, 8, 64]} />
+                    <meshStandardMaterial color={color} emissive={color} emissiveIntensity={0.4} roughness={0.4} />
+                </mesh>
+                <mesh rotation={[0, Math.PI / 2.4, Math.PI / 6]}>
+                    <torusGeometry args={[0.55, 0.014, 8, 64]} />
+                    <meshStandardMaterial color={color} emissive={color} emissiveIntensity={0.4} roughness={0.4} />
+                </mesh>
+                <mesh rotation={[0, -Math.PI / 2.4, -Math.PI / 6]}>
+                    <torusGeometry args={[0.55, 0.014, 8, 64]} />
+                    <meshStandardMaterial color={color} emissive={color} emissiveIntensity={0.4} roughness={0.4} />
+                </mesh>
+            </group>
         </group>
     );
 }
