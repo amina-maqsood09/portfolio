@@ -5,7 +5,7 @@ export default function About() {
   return (
     <section id="about" className="py-24 md:py-28 relative overflow-hidden" data-testid="section-about">
       {/* Subtle background accent */}
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-amber-500/5 dark:bg-amber-500/8 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-violet-500/5 dark:bg-violet-500/8 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="grid lg:grid-cols-[260px_1fr_1fr] gap-10 lg:gap-12 items-start">
@@ -94,7 +94,7 @@ export default function About() {
                     transition={{ duration: 0.35, delay: 0.3 + i * 0.09 }}
                     className="flex gap-4"
                   >
-                    <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-amber-50 dark:bg-amber-950/50 border border-amber-200 dark:border-amber-800/60 text-primary flex items-center justify-center font-bold text-base font-display">
+                    <div className="flex-shrink-0 w-11 h-11 rounded-xl bg-violet-50 dark:bg-violet-950/50 border border-violet-200 dark:border-violet-800/60 text-primary flex items-center justify-center font-bold text-base font-display">
                       {item.value}
                     </div>
                     <div>

@@ -12,7 +12,7 @@ const experiences = [
     tags: ["React", "AI Integration", "UI/UX"],
     current: true,
   },
-    {
+  {
     role: "AI/Machine Learning Intern",
     company: "Zynvex Solutions",
     period: "15 Jul 2026 – 23 Aug 2026",
@@ -72,19 +72,19 @@ export default function Experience() {
                 className="relative pl-12 md:pl-24"
               >
                 {/* Timeline dot */}
-                <div className="absolute left-1.5 md:left-6 top-6 w-5 h-5 rounded-full bg-primary ring-4 ring-white dark:ring-background shadow-md shadow-amber-500/30 flex-shrink-0" />
+                <div className="absolute left-1.5 md:left-6 top-6 w-5 h-5 rounded-full bg-primary ring-4 ring-white dark:ring-background shadow-md shadow-violet-500/30 flex-shrink-0" />
 
                 <motion.div
                   whileHover={{ y: -2 }}
                   transition={{ type: "spring", stiffness: 320, damping: 24 }}
-                  className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6 md:p-7 shadow-sm hover:shadow-md hover:border-amber-200 dark:hover:border-slate-700 transition-all duration-200"
+                  className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6 md:p-7 shadow-sm hover:shadow-md hover:border-violet-200 dark:hover:border-slate-700 transition-all duration-200"
                 >
                   <div className="flex flex-col md:flex-row md:items-start justify-between gap-3 mb-4">
                     <div>
                       <div className="flex items-center gap-2 flex-wrap mb-1">
                         <h3 className="text-lg font-display font-bold text-slate-900 dark:text-white">{exp.role}</h3>
                         {exp.current && (
-                          <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-amber-50 dark:bg-amber-950/60 text-primary border border-amber-200 dark:border-amber-800/60">
+                          <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-violet-50 dark:bg-violet-950/60 text-primary border border-violet-200 dark:border-violet-800/60">
                             Current
                           </span>
                         )}

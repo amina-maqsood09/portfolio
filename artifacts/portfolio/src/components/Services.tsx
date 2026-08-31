@@ -37,11 +37,11 @@ export default function Services() {
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.4, delay: idx * 0.07 }}
               whileHover={{ y: -4 }}
-              className="relative p-7 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-amber-200 dark:hover:border-slate-700 transition-all duration-200 group cursor-default overflow-hidden"
+              className="relative p-7 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-violet-200 dark:hover:border-slate-700 transition-all duration-200 group cursor-default overflow-hidden"
               data-testid={`card-service-${idx}`}
             >
               {/* Subtle gradient corner */}
-              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-amber-50 dark:from-amber-950/40 to-transparent rounded-bl-3xl pointer-events-none" />
+              <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-violet-50 dark:from-violet-950/40 to-transparent rounded-bl-3xl pointer-events-none" />
 
               {/* Blue top accent line */}
               <div className="absolute top-0 left-0 right-0 h-[2px] bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
@@ -62,7 +62,7 @@ export default function Services() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.4, delay: services.length * 0.07 }}
             whileHover={{ y: -4 }}
-            className="relative p-7 rounded-xl border-2 border-dashed border-slate-200 dark:border-slate-700 hover:border-primary dark:hover:border-primary hover:bg-amber-50/50 dark:hover:bg-amber-950/20 transition-all duration-200 flex flex-col items-start justify-between group"
+            className="relative p-7 rounded-xl border-2 border-dashed border-slate-200 dark:border-slate-700 hover:border-primary dark:hover:border-primary hover:bg-violet-50/50 dark:hover:bg-violet-950/20 transition-all duration-200 flex flex-col items-start justify-between group"
             data-testid="card-service-cta"
           >
             <div>

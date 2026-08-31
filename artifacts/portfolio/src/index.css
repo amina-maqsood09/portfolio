@@ -102,10 +102,6 @@
   --violet-400: #C084FC;
 }
 
-.dark {
-  /* Dark mode uses the :root values above directly — no overrides needed */
-}
-
 .light {
   /* ── Light Mode — Violet-toned refresh (same family, light surface) ── */
   --background: 260 45% 97%;

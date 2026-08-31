@@ -21,7 +21,7 @@ const featuredProjects = [
   {
     title: "Modern Image Gallery",
     description: "CSS Grid layout with category-based filtering, lightbox viewer, keyboard navigation, and smooth scroll animations.",
-    gradient: "from-amber-950 via-stone-900 to-stone-800",
+    gradient: "from-violet-950 via-stone-900 to-stone-800",
     symbol: "[ ]",
     tags: ["JavaScript", "CSS Grid", "HTML"],
     demoLink: "https://github.com/amina-maqsood09",
@@ -30,7 +30,7 @@ const featuredProjects = [
   {
     title: "Portfolio Website v1",
     description: "Responsive personal portfolio with scroll-triggered animations and a spinning ring photo effect — live on GitHub Pages.",
-    gradient: "from-stone-900 via-amber-950 to-stone-800",
+    gradient: "from-stone-900 via-violet-950 to-stone-800",
     symbol: "< />",
     tags: ["HTML", "CSS", "JavaScript"],
     demoLink: "https://amina-maqsood09.github.io/portfolio",
@@ -39,7 +39,7 @@ const featuredProjects = [
   {
     title: "Ledgerly — SaaS Landing Page",
     description: "A modern SaaS landing page demo for a fictional accounting platform, featuring animated hero sections, feature grids, pricing tables, and a polished responsive layout.",
-    gradient: "from-amber-950 via-stone-900 to-stone-800",
+    gradient: "from-violet-950 via-stone-900 to-stone-800",
     symbol: "$/",
     tags: ["React", "Tailwind CSS", "Framer Motion"],
     demoLink: "https://github.com/amina-maqsood09/saas-landing-page-demo",
@@ -48,7 +48,7 @@ const featuredProjects = [
   {
     title: "Product List App",
     description: "A clean, interactive product listing application with filtering, cart management, and a responsive card-based UI — demonstrating core React state management patterns.",
-    gradient: "from-stone-800 via-stone-900 to-amber-950",
+    gradient: "from-stone-800 via-stone-900 to-violet-950",
     symbol: "[ * ]",
     tags: ["React", "JavaScript", "CSS"],
     demoLink: "https://github.com/amina-maqsood09/product-list-app",
@@ -57,7 +57,7 @@ const featuredProjects = [
   {
     title: "UXLens AI",
     description: "AI-powered UX reviewer that analyzes any live website, flags usability and accessibility issues, and generates actionable design improvement recommendations using computer vision and the Gemini API.",
-    gradient: "from-amber-950 via-amber-900 to-stone-900",
+    gradient: "from-violet-950 via-violet-900 to-stone-900",
     symbol: "UX",
     tags: ["React", "Node.js", "Puppeteer", "Gemini API"],
     demoLink: "https://uxlens-ai-server.vercel.app",
@@ -66,7 +66,7 @@ const featuredProjects = [
   {
     title: "FluentBuddy AI",
     description: "An AI-powered English learning companion with conversational practice, instant feedback, and progress tracking, built with the Gemini API and Firebase.",
-    gradient: "from-stone-900 via-amber-950 to-amber-900",
+    gradient: "from-stone-900 via-violet-950 to-violet-900",
     symbol: "EN",
     tags: ["React", "TypeScript", "Firebase", "Gemini API"],
     demoLink: "https://fluentbuddy-ai.vercel.app",
@@ -115,10 +115,10 @@ export default function Projects() {
               data-testid={`card-project-${idx}`}
             >
               <TiltCard className="h-full group">
-                <div className="glass-card rounded-xl overflow-hidden flex flex-col h-full cursor-default border border-slate-200 dark:border-slate-800 group-hover:border-amber-300 dark:group-hover:border-amber-700/60 group-hover:shadow-xl group-hover:shadow-amber-500/10 transition-all duration-200">
+                <div className="glass-card rounded-xl overflow-hidden flex flex-col h-full cursor-default border border-slate-200 dark:border-slate-800 group-hover:border-violet-300 dark:group-hover:border-violet-700/60 group-hover:shadow-xl group-hover:shadow-violet-500/10 transition-all duration-200">
                   {/* Thumbnail */}
                   <div className={`relative h-40 overflow-hidden bg-gradient-to-br ${project.gradient} flex items-center justify-center`}>
-                    <span className="font-mono text-5xl font-bold text-amber-400 opacity-35 select-none group-hover:opacity-55 group-hover:scale-110 transition-all duration-300">
+                    <span className="font-mono text-5xl font-bold text-violet-400 opacity-35 select-none group-hover:opacity-55 group-hover:scale-110 transition-all duration-300">
                       {project.symbol}
                     </span>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/25 to-transparent" />
@@ -137,7 +137,7 @@ export default function Projects() {
                     </div>
                     <div className="flex gap-5">
                       <a href={project.demoLink} target="_blank" rel="noopener noreferrer"
-                        className="flex items-center gap-1.5 text-sm font-semibold text-primary hover:text-amber-700 transition-colors duration-150">
+                        className="flex items-center gap-1.5 text-sm font-semibold text-primary hover:text-violet-700 transition-colors duration-150">
                         <ExternalLink size={14} /> Live Demo
                       </a>
                       <a href={project.githubLink} target="_blank" rel="noopener noreferrer"
@@ -175,7 +175,7 @@ export default function Projects() {
               viewport={{ once: true, margin: "-50px" }}
               whileHover={{ x: 3 }}
               transition={{ type: "spring", stiffness: 320, damping: 26 }}
-              className="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 border-l-4 border-l-amber-500 hover:shadow-md hover:shadow-amber-500/8 hover:border-amber-300 dark:hover:border-amber-700/50 transition-all duration-200 cursor-default"
+              className="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 border-l-4 border-l-violet-500 hover:shadow-md hover:shadow-violet-500/8 hover:border-violet-300 dark:hover:border-violet-700/50 transition-all duration-200 cursor-default"
               data-testid={`card-academic-${idx}`}
             >
               <h4 className="text-[15px] font-display font-bold mb-1.5 text-slate-900 dark:text-white">{project.title}</h4>
