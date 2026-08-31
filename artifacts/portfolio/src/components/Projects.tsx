@@ -96,8 +96,8 @@ export default function Projects() {
           className="mb-16"
         >
           <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Portfolio</p>
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 text-slate-900 dark:text-white">Selected Works</h2>
-          <p className="text-slate-500 dark:text-slate-400 max-w-2xl text-lg leading-relaxed">
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 text-foreground">Selected Works</h2>
+          <p className="text-muted-foreground max-w-2xl text-lg leading-relaxed">
             A mix of live frontend applications, AI capstones, and complex academic engineering projects.
           </p>
         </motion.div>
@@ -115,7 +115,7 @@ export default function Projects() {
               data-testid={`card-project-${idx}`}
             >
               <TiltCard className="h-full group">
-                <div className="glass-card rounded-xl overflow-hidden flex flex-col h-full cursor-default border border-slate-200 dark:border-slate-800 group-hover:border-violet-300 dark:group-hover:border-violet-700/60 group-hover:shadow-xl group-hover:shadow-violet-500/10 transition-all duration-200">
+                <div className="glass-card rounded-xl overflow-hidden flex flex-col h-full cursor-default border border-border group-hover:border-violet-300 dark:group-hover:border-violet-700/60 group-hover:shadow-xl group-hover:shadow-violet-500/10 transition-all duration-200">
                   {/* Thumbnail */}
                   <div className={`relative h-40 overflow-hidden bg-gradient-to-br ${project.gradient} flex items-center justify-center`}>
                     <span className="font-mono text-5xl font-bold text-violet-400 opacity-35 select-none group-hover:opacity-55 group-hover:scale-110 transition-all duration-300">
@@ -126,11 +126,11 @@ export default function Projects() {
 
                   {/* Content */}
                   <div className="p-6 flex flex-col flex-grow">
-                    <h3 className="text-lg font-display font-bold mb-2 text-slate-900 dark:text-white">{project.title}</h3>
-                    <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-5 flex-grow">{project.description}</p>
+                    <h3 className="text-lg font-display font-bold mb-2 text-foreground">{project.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed mb-5 flex-grow">{project.description}</p>
                     <div className="flex flex-wrap gap-1.5 mb-5">
                       {project.tags.map((tag) => (
-                        <span key={tag} className="text-xs font-medium px-2 py-0.5 bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-md text-slate-600 dark:text-slate-400">
+                        <span key={tag} className="text-xs font-medium px-2 py-0.5 bg-muted border border-border rounded-md text-muted-foreground">
                           {tag}
                         </span>
                       ))}
@@ -158,7 +158,7 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4 }}
-          className="text-2xl font-display font-bold mb-8 flex items-center gap-3 text-slate-900 dark:text-white"
+          className="text-2xl font-display font-bold mb-8 flex items-center gap-3 text-foreground"
         >
           <span className="w-6 h-px bg-primary inline-block" />
           Academic &amp; Engineering Projects
@@ -175,14 +175,14 @@ export default function Projects() {
               viewport={{ once: true, margin: "-50px" }}
               whileHover={{ x: 3 }}
               transition={{ type: "spring", stiffness: 320, damping: 26 }}
-              className="p-5 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 border-l-4 border-l-violet-500 hover:shadow-md hover:shadow-violet-500/8 hover:border-violet-300 dark:hover:border-violet-700/50 transition-all duration-200 cursor-default"
+              className="p-5 rounded-xl bg-white dark:bg-slate-900 border border-border border-l-4 border-l-violet-500 hover:shadow-md hover:shadow-violet-500/8 hover:border-violet-300 dark:hover:border-violet-700/50 transition-all duration-200 cursor-default"
               data-testid={`card-academic-${idx}`}
             >
-              <h4 className="text-[15px] font-display font-bold mb-1.5 text-slate-900 dark:text-white">{project.title}</h4>
-              <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed mb-3">{project.description}</p>
+              <h4 className="text-[15px] font-display font-bold mb-1.5 text-foreground">{project.title}</h4>
+              <p className="text-muted-foreground text-sm leading-relaxed mb-3">{project.description}</p>
               <div className="flex flex-wrap gap-1.5">
                 {project.tags.map((tag) => (
-                  <span key={tag} className="text-xs font-medium px-2 py-0.5 bg-slate-100 dark:bg-slate-800 rounded text-slate-500 dark:text-slate-400">
+                  <span key={tag} className="text-xs font-medium px-2 py-0.5 bg-muted rounded text-muted-foreground">
                     {tag}
                   </span>
                 ))}

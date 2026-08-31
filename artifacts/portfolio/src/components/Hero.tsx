@@ -51,7 +51,7 @@ export default function Hero() {
             {/* Headline */}
             <motion.h1
               variants={itemVariants}
-              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.06] tracking-tight mb-6 text-slate-900 dark:text-white"
+              className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold leading-[1.06] tracking-tight mb-6 text-foreground"
             >
               Hi, I'm Amina.
               <br />
@@ -66,7 +66,7 @@ export default function Hero() {
             {/* Subtext */}
             <motion.p
               variants={itemVariants}
-              className="text-base md:text-lg text-slate-600 dark:text-slate-400 max-w-xl mb-10 leading-relaxed"
+              className="text-base md:text-lg text-muted-foreground max-w-xl mb-10 leading-relaxed"
             >
               A 3rd-year Software Engineering student at COMSATS University, building pixel-perfect interfaces and exploring the intersection of AI and frontend engineering.
             </motion.p>
@@ -80,7 +80,8 @@ export default function Hero() {
                 href="#projects"
                 whileHover={{ scale: 1.02, y: -1 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center justify-center gap-2 bg-primary text-white px-7 py-3 rounded-lg font-semibold text-[15px] shadow-md shadow-violet-500/20 hover:shadow-lg hover:shadow-violet-500/30 hover:bg-violet-700 transition-all duration-200"
+                style={{ backgroundColor: "#7C3AED", color: "#F6F3FC" }}
+                className="inline-flex items-center justify-center gap-2 px-7 py-3 rounded-lg font-semibold text-[15px] shadow-md shadow-violet-500/20 hover:shadow-lg hover:shadow-violet-500/30 hover:brightness-110 transition-all duration-200"
                 data-testid="btn-view-projects"
               >
                 View Projects <ArrowRight size={17} />
@@ -89,7 +90,7 @@ export default function Hero() {
                 href="#contact"
                 whileHover={{ scale: 1.02, y: -1 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center justify-center gap-2 bg-transparent text-slate-700 dark:text-slate-300 border border-slate-300 dark:border-slate-700 px-7 py-3 rounded-lg font-semibold text-[15px] hover:border-primary hover:text-primary hover:bg-violet-50 dark:hover:bg-violet-950/30 transition-all duration-200"
+                className="inline-flex items-center justify-center gap-2 bg-transparent text-foreground border border-border px-7 py-3 rounded-lg font-semibold text-[15px] hover:border-primary hover:text-primary hover:bg-violet-50 dark:hover:bg-violet-950/30 transition-all duration-200"
                 data-testid="btn-contact"
               >
                 Get in Touch <Mail size={17} />
@@ -115,8 +116,8 @@ export default function Hero() {
                   className="glass-card card-hover p-4 rounded-xl flex flex-col cursor-default"
                 >
                   <span className="text-primary mb-2">{stat.icon}</span>
-                  <h3 className="text-xl font-display font-bold text-slate-900 dark:text-white mb-0.5">{stat.value}</h3>
-                  <p className="text-xs text-slate-500 dark:text-slate-400 font-medium leading-snug">{stat.label}</p>
+                  <h3 className="text-xl font-display font-bold text-foreground mb-0.5">{stat.value}</h3>
+                  <p className="text-xs text-muted-foreground font-medium leading-snug">{stat.label}</p>
                 </motion.div>
               ))}
             </motion.div>

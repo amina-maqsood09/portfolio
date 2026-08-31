@@ -56,7 +56,7 @@ const skillCategories: { title: string; icon: React.ReactNode; proficiency: numb
 
 function ProficiencyBar({ level, delay }: { level: number; delay: number }) {
   return (
-    <div className="h-[3px] w-full bg-slate-200 dark:bg-slate-700 rounded-full overflow-hidden">
+    <div className="h-[3px] w-full bg-muted rounded-full overflow-hidden">
       <motion.div
         className="h-full rounded-full bg-gradient-to-r from-violet-600 to-violet-400"
         initial={{ width: 0 }}
@@ -81,8 +81,8 @@ export default function Skills() {
           className="text-center mb-16"
         >
           <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Skills</p>
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 text-slate-900 dark:text-white">Technical Arsenal</h2>
-          <p className="text-slate-500 dark:text-slate-400 max-w-2xl mx-auto text-lg leading-relaxed">
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 text-foreground">Technical Arsenal</h2>
+          <p className="text-muted-foreground max-w-2xl mx-auto text-lg leading-relaxed">
             A toolkit spanning low-level algorithms to high-level frontend interfaces — and everything in between.
           </p>
         </motion.div>
@@ -96,7 +96,7 @@ export default function Skills() {
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.4, delay: idx * 0.06, ease: "easeOut" }}
               whileHover={{ y: -3 }}
-              className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-violet-200 dark:hover:border-slate-700 transition-all duration-200 cursor-default group flex flex-col"
+              className="bg-white dark:bg-slate-900 border border-border rounded-xl p-6 shadow-sm hover:shadow-md hover:border-violet-200 dark:hover:border-slate-700 transition-all duration-200 cursor-default group flex flex-col"
             >
               {/* Header */}
               <div className="flex items-center justify-between mb-4">
@@ -104,7 +104,7 @@ export default function Skills() {
                   <div className="p-2 rounded-lg bg-violet-50 dark:bg-violet-950/50 text-primary group-hover:scale-110 transition-transform duration-200">
                     {category.icon}
                   </div>
-                  <h3 className="text-[15px] font-display font-bold text-slate-900 dark:text-white">{category.title}</h3>
+                  <h3 className="text-[15px] font-display font-bold text-foreground">{category.title}</h3>
                 </div>
                 <span className="text-xs font-bold font-mono text-primary">{category.proficiency}%</span>
               </div>
@@ -126,7 +126,7 @@ export default function Skills() {
                     className="group/skill"
                   >
                     <div className="flex justify-between items-center mb-1">
-                      <span className="text-sm text-slate-600 dark:text-slate-400 group-hover/skill:text-slate-900 dark:group-hover/skill:text-white transition-colors duration-150">
+                      <span className="text-sm text-muted-foreground group-hover/skill:text-slate-900 dark:group-hover/skill:text-white transition-colors duration-150">
                         {skill.name}
                       </span>
                       <span className="text-[10px] text-slate-400 font-mono opacity-0 group-hover/skill:opacity-100 transition-opacity duration-150">

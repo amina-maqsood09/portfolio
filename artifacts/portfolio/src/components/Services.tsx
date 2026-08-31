@@ -22,8 +22,8 @@ export default function Services() {
           className="mb-16"
         >
           <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Services</p>
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 text-slate-900 dark:text-white">What I Build</h2>
-          <p className="text-slate-500 dark:text-slate-400 max-w-2xl text-lg leading-relaxed">
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-4 text-foreground">What I Build</h2>
+          <p className="text-muted-foreground max-w-2xl text-lg leading-relaxed">
             Whether you're a startup, a small business, or an individual — I can help you build a clean, modern web presence that works.
           </p>
         </motion.div>
@@ -37,7 +37,7 @@ export default function Services() {
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.4, delay: idx * 0.07 }}
               whileHover={{ y: -4 }}
-              className="relative p-7 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-violet-200 dark:hover:border-slate-700 transition-all duration-200 group cursor-default overflow-hidden"
+              className="relative p-7 rounded-xl bg-white dark:bg-slate-900 border border-border shadow-sm hover:shadow-md hover:border-violet-200 dark:hover:border-slate-700 transition-all duration-200 group cursor-default overflow-hidden"
               data-testid={`card-service-${idx}`}
             >
               {/* Subtle gradient corner */}
@@ -49,8 +49,8 @@ export default function Services() {
               <div className="mb-5 text-primary group-hover:scale-110 transition-transform duration-200 w-fit relative z-10">
                 {service.icon}
               </div>
-              <h3 className="text-lg font-display font-bold mb-2.5 text-slate-900 dark:text-white relative z-10">{service.title}</h3>
-              <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed relative z-10">{service.description}</p>
+              <h3 className="text-lg font-display font-bold mb-2.5 text-foreground relative z-10">{service.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed relative z-10">{service.description}</p>
             </motion.div>
           ))}
 
@@ -62,13 +62,13 @@ export default function Services() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.4, delay: services.length * 0.07 }}
             whileHover={{ y: -4 }}
-            className="relative p-7 rounded-xl border-2 border-dashed border-slate-200 dark:border-slate-700 hover:border-primary dark:hover:border-primary hover:bg-violet-50/50 dark:hover:bg-violet-950/20 transition-all duration-200 flex flex-col items-start justify-between group"
+            className="relative p-7 rounded-xl border-2 border-dashed border-border hover:border-primary dark:hover:border-primary hover:bg-violet-50/50 dark:hover:bg-violet-950/20 transition-all duration-200 flex flex-col items-start justify-between group"
             data-testid="card-service-cta"
           >
             <div>
               <p className="text-xs font-semibold text-primary mb-2 uppercase tracking-widest">Have a project?</p>
-              <h3 className="text-lg font-display font-bold mb-3 text-slate-900 dark:text-white">Let's Work Together</h3>
-              <p className="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">Tell me about your idea and I'll get back to you within 24 hours.</p>
+              <h3 className="text-lg font-display font-bold mb-3 text-foreground">Let's Work Together</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">Tell me about your idea and I'll get back to you within 24 hours.</p>
             </div>
             <span className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary group-hover:gap-3 transition-all duration-200">
               Get in touch

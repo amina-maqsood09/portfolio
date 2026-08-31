@@ -60,7 +60,7 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.href}
-                className="relative px-3 py-1.5 text-sm font-medium text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors duration-150 group"
+                className="relative px-3 py-1.5 text-sm font-medium text-muted-foreground hover:text-slate-900 dark:hover:text-white transition-colors duration-150 group"
                 data-testid={`nav-link-${link.name.toLowerCase()}`}
               >
                 {link.name}
@@ -71,7 +71,7 @@ export default function Navbar() {
             <div className="w-px h-4 bg-border mx-2" />
             <button
               onClick={toggleTheme}
-              className="p-2 rounded-lg text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-150"
+              className="p-2 rounded-lg text-slate-500 hover:text-foreground dark:hover:text-white hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-150"
               data-testid="btn-theme-toggle"
               aria-label="Toggle theme"
             >

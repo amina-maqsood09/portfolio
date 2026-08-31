@@ -3,6 +3,12 @@
 @import "tw-animate-css";
 /* Tailwind plugin directive disabled to avoid IDE CSS parser warnings. */
 
+/* Bind Tailwind's dark: variant to the app's own .dark class (toggled by
+   ThemeProvider), instead of the browser default which follows the OS
+   prefers-color-scheme setting. Without this, dark: utilities and the
+   in-app light/dark toggle can disagree and text/backgrounds mismatch. */
+/* @custom-variant dark (&:is(.dark *)); */
+
 :root {
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
@@ -101,6 +107,10 @@
   --violet-600: #7C3AED;
   --violet-400: #C084FC;
 }
+
+/* Dark mode uses the :root values above directly — no .dark ruleset needed.
+   The .dark class is still added to <html> by ThemeProvider and matched by
+   the @custom-variant dark rule above, so dark: utilities still work. */
 
 .light {
   /* ── Light Mode — Violet-toned refresh (same family, light surface) ── */

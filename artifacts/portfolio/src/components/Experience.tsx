@@ -54,7 +54,7 @@ export default function Experience() {
           className="mb-16"
         >
           <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Work History</p>
-          <h2 className="text-4xl md:text-5xl font-display font-bold text-slate-900 dark:text-white">Experience</h2>
+          <h2 className="text-4xl md:text-5xl font-display font-bold text-foreground">Experience</h2>
         </motion.div>
 
         <div className="max-w-4xl relative">
@@ -77,12 +77,12 @@ export default function Experience() {
                 <motion.div
                   whileHover={{ y: -2 }}
                   transition={{ type: "spring", stiffness: 320, damping: 24 }}
-                  className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-xl p-6 md:p-7 shadow-sm hover:shadow-md hover:border-violet-200 dark:hover:border-slate-700 transition-all duration-200"
+                  className="bg-white dark:bg-slate-900 border border-border rounded-xl p-6 md:p-7 shadow-sm hover:shadow-md hover:border-violet-200 dark:hover:border-slate-700 transition-all duration-200"
                 >
                   <div className="flex flex-col md:flex-row md:items-start justify-between gap-3 mb-4">
                     <div>
                       <div className="flex items-center gap-2 flex-wrap mb-1">
-                        <h3 className="text-lg font-display font-bold text-slate-900 dark:text-white">{exp.role}</h3>
+                        <h3 className="text-lg font-display font-bold text-foreground">{exp.role}</h3>
                         {exp.current && (
                           <span className="text-xs font-semibold px-2 py-0.5 rounded-full bg-violet-50 dark:bg-violet-950/60 text-primary border border-violet-200 dark:border-violet-800/60">
                             Current
@@ -91,17 +91,17 @@ export default function Experience() {
                       </div>
                       <p className="text-[15px] font-semibold text-primary">{exp.company}</p>
                     </div>
-                    <div className="flex flex-col gap-1 text-sm text-slate-500 dark:text-slate-400 md:text-right shrink-0">
+                    <div className="flex flex-col gap-1 text-sm text-muted-foreground md:text-right shrink-0">
                       <span className="flex items-center gap-1.5 md:justify-end"><Calendar size={12} />{exp.period}</span>
                       <span className="flex items-center gap-1.5 md:justify-end"><MapPin size={12} />{exp.location}</span>
                     </div>
                   </div>
 
-                  <p className="text-slate-600 dark:text-slate-400 leading-relaxed mb-5 text-[15px]">{exp.description}</p>
+                  <p className="text-muted-foreground leading-relaxed mb-5 text-[15px]">{exp.description}</p>
 
                   <div className="flex flex-wrap gap-2">
                     {exp.tags.map((tag) => (
-                      <span key={tag} className="text-xs font-medium px-2.5 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 rounded-md border border-slate-200 dark:border-slate-700">
+                      <span key={tag} className="text-xs font-medium px-2.5 py-1 bg-muted text-muted-foreground rounded-md border border-border">
                         {tag}
                       </span>
                     ))}

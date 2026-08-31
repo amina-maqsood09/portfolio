@@ -25,7 +25,7 @@ export default function About() {
                 style={{ background: "linear-gradient(135deg, rgba(37,99,235,0.25), transparent 55%, rgba(37,99,235,0.12))" }}
               />
               {/* Photo */}
-              <div className="relative rounded-2xl overflow-hidden bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-lg" style={{ aspectRatio: "3/4" }}>
+              <div className="relative rounded-2xl overflow-hidden bg-muted border border-border shadow-lg" style={{ aspectRatio: "3/4" }}>
                 <img
                   src="/profile-photo.png"
                   alt="Amina Maqsood"
@@ -38,9 +38,9 @@ export default function About() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.45, delay: 0.35 }}
-                className="mt-4 glass-card px-4 py-3 rounded-xl text-center border border-slate-200 dark:border-slate-800"
+                className="mt-4 glass-card px-4 py-3 rounded-xl text-center border border-border"
               >
-                <p className="font-display font-bold text-slate-900 dark:text-white text-sm">Amina Maqsood</p>
+                <p className="font-display font-bold text-foreground text-sm">Amina Maqsood</p>
                 <p className="text-xs text-primary font-medium mt-0.5">Frontend Developer · AI Enthusiast</p>
               </motion.div>
             </div>
@@ -54,11 +54,11 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-4">About Me</p>
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-8 leading-[1.12] text-slate-900 dark:text-white">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-8 leading-[1.12] text-foreground">
               Engineering with{" "}
               <span className="text-primary">intent.</span>
             </h2>
-            <div className="space-y-5 text-base md:text-[17px] text-slate-600 dark:text-slate-400 leading-relaxed">
+            <div className="space-y-5 text-base md:text-[17px] text-muted-foreground leading-relaxed">
               <p>
                 I'm a third-year Bachelor of Software Engineering student at COMSATS University Islamabad. What started as curiosity about how the web works has grown into a disciplined pursuit of software architecture, AI-powered interfaces, and frontend engineering — backed by two internships and a growing body of real-world projects.
               </p>
@@ -78,8 +78,8 @@ export default function About() {
             viewport={{ once: true, margin: "-80px" }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className="glass-card p-7 md:p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
-              <h3 className="text-xl font-display font-bold mb-7 text-slate-900 dark:text-white">The Journey So Far</h3>
+            <div className="glass-card p-7 md:p-8 rounded-2xl border border-border shadow-sm">
+              <h3 className="text-xl font-display font-bold mb-7 text-foreground">The Journey So Far</h3>
               <ul className="space-y-7">
                 {[
                   { value: "5", label: "Current Semester", sub: "Deep diving into advanced coursework and applied software engineering." },
@@ -98,8 +98,8 @@ export default function About() {
                       {item.value}
                     </div>
                     <div>
-                      <h4 className="font-semibold text-slate-900 dark:text-white text-[15px] leading-tight">{item.label}</h4>
-                      <p className="text-sm text-slate-500 dark:text-slate-400 mt-1 leading-snug">{item.sub}</p>
+                      <h4 className="font-semibold text-foreground text-[15px] leading-tight">{item.label}</h4>
+                      <p className="text-sm text-muted-foreground mt-1 leading-snug">{item.sub}</p>
                     </div>
                   </motion.li>
                 ))}

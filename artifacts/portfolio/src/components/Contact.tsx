@@ -18,7 +18,7 @@ function XIcon({ size = 20 }: { size?: number }) {
 type FormStatus = "idle" | "sending" | "success" | "error";
 
 const inputClass =
-  "w-full px-4 py-3 rounded-lg bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-200 text-[15px]";
+  "w-full px-4 py-3 rounded-lg bg-white dark:bg-slate-900 border border-border text-foreground placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-200 text-[15px]";
 
 export default function Contact() {
   const formRef = useRef<HTMLFormElement>(null);
@@ -58,7 +58,7 @@ export default function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-24 md:py-28 bg-slate-50/70 dark:bg-muted/20 border-t border-slate-200 dark:border-slate-800" data-testid="section-contact">
+    <section id="contact" className="py-24 md:py-28 bg-slate-50/70 dark:bg-muted/20 border-t border-border" data-testid="section-contact">
       <div className="container mx-auto px-6 md:px-12">
 
         {/* Header */}
@@ -68,8 +68,8 @@ export default function Contact() {
           className="max-w-4xl mx-auto text-center mb-16"
         >
           <p className="text-xs font-semibold uppercase tracking-widest text-primary mb-3">Get in Touch</p>
-          <h2 className="text-4xl md:text-5xl font-display font-bold mb-5 text-slate-900 dark:text-white">Let's build something great.</h2>
-          <p className="text-lg text-slate-500 dark:text-slate-400 max-w-2xl mx-auto leading-relaxed">
+          <h2 className="text-4xl md:text-5xl font-display font-bold mb-5 text-foreground">Let's build something great.</h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Whether you're a recruiter, a startup looking for a frontend developer, or someone with a project idea — I'd love to hear from you.
           </p>
         </motion.div>
@@ -85,7 +85,7 @@ export default function Contact() {
             {/* Email */}
             <a
               href="mailto:amnamaqsood931@gmail.com"
-              className="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-primary/50 hover:shadow-md hover:shadow-violet-500/8 transition-all duration-200 group"
+              className="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 border border-border hover:border-primary/50 hover:shadow-md hover:shadow-violet-500/8 transition-all duration-200 group"
               data-testid="link-email"
             >
               <div className="w-11 h-11 rounded-xl bg-violet-50 dark:bg-violet-950/50 flex items-center justify-center text-primary group-hover:scale-110 transition-transform duration-200 flex-shrink-0">
@@ -93,7 +93,7 @@ export default function Contact() {
               </div>
               <div className="min-w-0">
                 <p className="text-xs text-slate-500 font-medium uppercase tracking-wide mb-0.5">Email</p>
-                <p className="font-semibold text-slate-900 dark:text-white truncate text-[15px]">amnamaqsood931@gmail.com</p>
+                <p className="font-semibold text-foreground truncate text-[15px]">amnamaqsood931@gmail.com</p>
               </div>
             </a>
 
@@ -102,26 +102,26 @@ export default function Contact() {
               href="https://wa.me/923414430561"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-primary/50 hover:shadow-md hover:shadow-violet-500/8 transition-all duration-200 group"
+              className="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 border border-border hover:border-primary/50 hover:shadow-md hover:shadow-violet-500/8 transition-all duration-200 group"
               data-testid="link-phone"
             >
-              <div className="w-11 h-11 rounded-xl bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 group-hover:bg-violet-50 dark:group-hover:bg-violet-950/50 group-hover:text-primary group-hover:scale-110 transition-all duration-200 flex-shrink-0">
+              <div className="w-11 h-11 rounded-xl bg-muted flex items-center justify-center text-muted-foreground group-hover:bg-violet-50 dark:group-hover:bg-violet-950/50 group-hover:text-primary group-hover:scale-110 transition-all duration-200 flex-shrink-0">
                 <Phone size={19} />
               </div>
               <div>
                 <p className="text-xs text-slate-500 font-medium uppercase tracking-wide mb-0.5">WhatsApp</p>
-                <p className="font-semibold text-slate-900 dark:text-white text-[15px]">+92 341 4430561</p>
+                <p className="font-semibold text-foreground text-[15px]">+92 341 4430561</p>
               </div>
             </a>
 
             {/* Location */}
-            <div className="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+            <div className="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-slate-900 border border-border">
               <div className="w-11 h-11 rounded-xl bg-violet-50 dark:bg-violet-950/50 flex items-center justify-center text-primary flex-shrink-0">
                 <MapPin size={19} />
               </div>
               <div>
                 <p className="text-xs text-slate-500 font-medium uppercase tracking-wide mb-0.5">Location</p>
-                <p className="font-semibold text-slate-900 dark:text-white text-[15px]">Vehari, Punjab, Pakistan (Remote-Ready)</p>
+                <p className="font-semibold text-foreground text-[15px]">Vehari, Punjab, Pakistan (Remote-Ready)</p>
               </div>
             </div>
 
@@ -136,7 +136,7 @@ export default function Contact() {
                   aria-label={link.label}
                   whileHover={{ scale: 1.08, y: -2 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-11 h-11 rounded-xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary/50 hover:bg-violet-50 dark:hover:bg-violet-950/30 hover:shadow-sm transition-all duration-200"
+                  className="w-11 h-11 rounded-xl bg-white dark:bg-slate-900 border border-border flex items-center justify-center text-slate-500 hover:text-primary hover:border-primary/50 hover:bg-violet-50 dark:hover:bg-violet-950/30 hover:shadow-sm transition-all duration-200"
                   data-testid={link.testId}
                 >
                   {link.icon}
@@ -146,7 +146,7 @@ export default function Contact() {
 
             {/* Response note */}
             <div className="p-4 rounded-xl bg-violet-50/80 dark:bg-violet-950/30 border border-violet-200/70 dark:border-violet-800/50">
-              <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              <p className="text-sm text-muted-foreground leading-relaxed">
                 <span className="text-primary font-semibold">Response time:</span> I typically reply within 24 hours. For urgent matters, reach me directly by email or WhatsApp.
               </p>
             </div>
@@ -156,7 +156,7 @@ export default function Contact() {
           <motion.div
             initial="hidden" whileInView="visible" viewport={{ once: true, margin: "-60px" }}
             variants={{ hidden: { opacity: 0, x: 20 }, visible: { opacity: 1, x: 0, transition: { duration: 0.5 } } }}
-            className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-6 md:p-8 shadow-sm"
+            className="bg-white dark:bg-slate-900 border border-border rounded-2xl p-6 md:p-8 shadow-sm"
           >
             <AnimatePresence mode="wait">
               {status === "success" ? (
@@ -176,8 +176,8 @@ export default function Contact() {
                   >
                     <CheckCircle size={52} className="text-emerald-500" />
                   </motion.div>
-                  <h3 className="text-2xl font-display font-bold text-slate-900 dark:text-white">Message sent!</h3>
-                  <p className="text-slate-500 dark:text-slate-400 max-w-xs text-[15px]">I'll get back to you soon.</p>
+                  <h3 className="text-2xl font-display font-bold text-foreground">Message sent!</h3>
+                  <p className="text-muted-foreground max-w-xs text-[15px]">I'll get back to you soon.</p>
                   <button
                     onClick={() => setStatus("idle")}
                     className="mt-3 text-sm font-medium text-primary hover:underline"
@@ -198,20 +198,20 @@ export default function Contact() {
                 >
                   <div className="grid grid-cols-2 gap-4">
                     <div className="col-span-2 sm:col-span-1">
-                      <label htmlFor="name" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5">Name *</label>
+                      <label htmlFor="name" className="block text-sm font-medium text-foreground mb-1.5">Name *</label>
                       <input type="text" id="name" name="name" required value={form.name} onChange={handleChange} className={inputClass} placeholder="Your name" data-testid="input-name" />
                     </div>
                     <div className="col-span-2 sm:col-span-1">
-                      <label htmlFor="email" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5">Email *</label>
+                      <label htmlFor="email" className="block text-sm font-medium text-foreground mb-1.5">Email *</label>
                       <input type="email" id="email" name="email" required value={form.email} onChange={handleChange} className={inputClass} placeholder="your@email.com" data-testid="input-email" />
                     </div>
                   </div>
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5">Subject</label>
+                    <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-1.5">Subject</label>
                     <input type="text" id="subject" name="subject" value={form.subject} onChange={handleChange} className={inputClass} placeholder="Project enquiry / Internship / Just saying hi" data-testid="input-subject" />
                   </div>
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1.5">Message *</label>
+                    <label htmlFor="message" className="block text-sm font-medium text-foreground mb-1.5">Message *</label>
                     <textarea id="message" name="message" rows={4} required value={form.message} onChange={handleChange} className={`${inputClass} resize-none`} placeholder="Tell me about your project, opportunity, or just say hi..." data-testid="input-message" />
                   </div>
 
