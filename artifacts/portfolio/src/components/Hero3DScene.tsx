@@ -1,16 +1,53 @@
-import React, { Suspense, useRef, useState, useEffect } from "react";
+import React, { Suspense, useRef, useState, useEffect, useMemo } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Environment } from "@react-three/drei";
 import * as THREE from "three";
 
 const COLORS = ["#22C55E", "#4ADE80", "#16A34A"];
 
-function GlassyShapes({ colorIndex }: { colorIndex: number }) {
+function makeCodeTexture(color: string): THREE.CanvasTexture {
+    const canvas = document.createElement("canvas");
+    canvas.width = 256;
+    canvas.height = 256;
+    const ctx = canvas.getContext("2d")!;
+
+    ctx.fillStyle = "#0A0F0C";
+    ctx.fillRect(0, 0, 256, 256);
+
+    const lineColors = ["#4ADE80", "#86EFAC", "#6B7280", color, "#9CA3AF"];
+    let y = 18;
+    const rng = (seed: number) => {
+        const x = Math.sin(seed) * 10000;
+        return x - Math.floor(x);
+    };
+    let seed = 1;
+    while (y < 246) {
+        const indent = Math.floor(rng(seed++) * 4) * 12;
+        const width = 40 + rng(seed++) * 150;
+        ctx.fillStyle = lineColors[Math.floor(rng(seed++) * lineColors.length)];
+        ctx.globalAlpha = 0.55 + rng(seed++) * 0.35;
+        ctx.fillRect(14 + indent, y, width, 6);
+        y += 14;
+    }
+    ctx.globalAlpha = 1;
+
+    const texture = new THREE.CanvasTexture(canvas);
+    texture.colorSpace = THREE.SRGBColorSpace;
+    return texture;
+}
+
+function TechShapes({ colorIndex }: { colorIndex: number }) {
     const groupRef = useRef<THREE.Group>(null);
-    const torusRef = useRef<THREE.Mesh>(null);
-    const icoRef = useRef<THREE.Mesh>(null);
+    const cubeRef = useRef<THREE.Mesh>(null);
+    const icoRef = useRef<THREE.LineSegments>(null);
     const mouse = useRef({ x: 0, y: 0 });
     const color = COLORS[colorIndex % COLORS.length];
+
+    const codeTexture = useMemo(() => makeCodeTexture(color), [color]);
+
+    const icoEdges = useMemo(() => {
+        const geo = new THREE.IcosahedronGeometry(1, 0);
+        return new THREE.EdgesGeometry(geo);
+    }, []);
 
     useEffect(() => {
         const canHover = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
@@ -25,45 +62,36 @@ function GlassyShapes({ colorIndex }: { colorIndex: number }) {
 
     useFrame((_, delta) => {
         if (groupRef.current) {
-            groupRef.current.rotation.y += delta * 0.18;
-            const targetX = mouse.current.y * 0.25;
-            const targetZ = -mouse.current.x * 0.25;
+            groupRef.current.rotation.y += delta * 0.16;
+            const targetX = mouse.current.y * 0.22;
+            const targetZ = -mouse.current.x * 0.22;
             groupRef.current.rotation.x += (targetX - groupRef.current.rotation.x) * 0.04;
             groupRef.current.rotation.z += (targetZ - groupRef.current.rotation.z) * 0.04;
         }
-        if (torusRef.current) torusRef.current.rotation.x += delta * 0.35;
-        if (icoRef.current) icoRef.current.rotation.y -= delta * 0.22;
+        if (cubeRef.current) {
+            cubeRef.current.rotation.x += delta * 0.25;
+            cubeRef.current.rotation.y += delta * 0.3;
+        }
+        if (icoRef.current) {
+            icoRef.current.rotation.y -= delta * 0.22;
+            icoRef.current.rotation.x -= delta * 0.12;
+        }
     });
 
     return (
         <group ref={groupRef}>
-            <mesh ref={torusRef} position={[0.85, 0.3, 0]}>
-                <torusGeometry args={[1.05, 0.34, 32, 128]} />
-                <meshPhysicalMaterial
-                    color={color}
-                    roughness={0.15}
-                    metalness={0.1}
-                    transmission={0.9}
-                    thickness={1.2}
-                    ior={1.4}
-                    clearcoat={1}
-                    clearcoatRoughness={0.1}
-                    envMapIntensity={1.3}
-                />
+            <mesh ref={cubeRef} position={[0.8, 0.25, 0]}>
+                <boxGeometry args={[1.3, 1.3, 1.3]} />
+                <meshStandardMaterial map={codeTexture} roughness={0.55} metalness={0.15} />
             </mesh>
-            <mesh ref={icoRef} position={[-1.05, -0.4, 0.3]} scale={0.82}>
+
+            <lineSegments ref={icoRef} position={[-1.1, -0.35, 0.2]} scale={0.95}>
+                <primitive object={icoEdges} attach="geometry" />
+                <lineBasicMaterial color={color} linewidth={1.5} />
+            </lineSegments>
+            <mesh position={[-1.1, -0.35, 0.2]} scale={0.95}>
                 <icosahedronGeometry args={[1, 0]} />
-                <meshPhysicalMaterial
-                    color={color}
-                    roughness={0.2}
-                    metalness={0.1}
-                    transmission={0.85}
-                    thickness={1}
-                    ior={1.4}
-                    clearcoat={1}
-                    clearcoatRoughness={0.15}
-                    envMapIntensity={1.3}
-                />
+                <meshBasicMaterial color={color} transparent opacity={0.06} />
             </mesh>
         </group>
     );
@@ -84,12 +112,11 @@ export default function Hero3DScene() {
             }}
         >
             <Canvas camera={{ position: [0, 0, 4.2], fov: 45 }} dpr={[1, 2]} gl={{ antialias: true, alpha: true }}>
-                <ambientLight intensity={0.5} />
-                <pointLight position={[3, 3, 3]} intensity={1.4} color="#22C55E" />
-                <pointLight position={[-3, -2, 2]} intensity={0.7} color="#4ADE80" />
+                <ambientLight intensity={0.6} />
+                <pointLight position={[3, 3, 3]} intensity={1.3} color="#22C55E" />
+                <pointLight position={[-3, -2, 2]} intensity={0.5} color="#4ADE80" />
                 <Suspense fallback={null}>
-                    <Environment preset="city" />
-                    <GlassyShapes colorIndex={colorIndex} />
+                    <TechShapes colorIndex={colorIndex} />
                 </Suspense>
             </Canvas>
         </div>
