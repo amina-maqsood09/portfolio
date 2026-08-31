@@ -179,11 +179,39 @@ Week 6 · General AI Fluency
 
 ### 📝 Final Retrospective
 
-*To be added after completing the 500–800 word retrospective for Assignment 8.2.*
+# My AI Fluency Journey: From Learning to Building
+
+When I started Week 1 of the AI Fluency track, my main goal was simple: I wanted to learn more about AI and understand how to use different AI tools properly. At that point, I honestly did not expect that I would learn and build as much as I eventually did. I thought I would learn a few tools and concepts, but the track turned into a much bigger learning experience for me.
+
+One of the biggest things I learned was that using AI effectively is not just about asking it a question and copying the answer. I learned how to set up tools, connect different services, understand how different parts of a project work together, and troubleshoot errors when something did not work. I became much more comfortable with technical setup and debugging. Whenever I faced an error, I used AI to understand the problem, but I also checked the solution myself instead of blindly copying and pasting it. I wanted to understand why something worked before keeping it in my project.
+
+My main project during the track was my personal portfolio website. I did not want to create a basic portfolio and stop there. I kept improving it throughout the weeks. I added interactive elements, including 3D components, worked on the visual design, improved responsiveness, tested the website, and deployed it live. At different stages, I made more than 50 commits while building and improving the project. Seeing the website change from an initial idea into a live, working project was one of the most rewarding parts of the track.
+
+AI became part of almost every stage of my workflow. I used it for brainstorming, understanding concepts, writing and improving code, troubleshooting errors, reviewing my work, and thinking through design decisions. I also applied ideas and practices from the AI Fluency framework and from the Anthropic-related courses I had completed, especially around using AI as a thinking partner rather than simply treating it as a code generator.
+
+Another important part of my learning was designing my personal agent. The earlier weeks helped me understand consistency, workflows, prompting, and how AI systems can be structured around a specific purpose. Later, I was able to use those ideas to think more seriously about building an agent of my own. This changed how I think about AI projects: instead of asking, “What can AI generate?”, I started asking, “What problem am I trying to solve, and where does AI actually add value?”
+
+There were also many moments where things did not work immediately. I had to deal with setup problems, connection issues, errors, deployment problems, and changes during development. Those experiences taught me that building with AI still requires human judgment. AI can suggest a solution, but I need to test it, understand it, and decide whether it is actually correct for my project.
+
+If I continue this project, I would like to build a larger real-world project, possibly a website or application for a company, business, or specific organization. I want to take what I learned here and use it on a more complete product with a real problem, real users, and more advanced AI functionality.
+
+The three most transferable lessons I learned are:
+
+**1. AI should be used thoughtfully, not blindly.**
+Knowing how to use AI is not about copying its answers. It is about asking better questions, checking the results, understanding the reasoning, and using AI where it genuinely improves the work.
+
+**2. Building is the best way to learn.**
+I understood concepts much better when I actually used them in my portfolio and projects. Errors and debugging became learning opportunities rather than just problems.
+
+**3. Consistency and iteration matter.**
+A good project does not appear perfectly on the first attempt. I learned to keep improving, testing, reviewing, and refining my work instead of stopping when the first version worked.
+
+When I look back at Week 1, I mainly wanted to learn AI. By the end of the track, I had learned how to use AI as a practical partner while building and improving a real project. That change is probably the most valuable outcome of the entire experience.
+
 
 ### 📢 Build-in-Public Post
 
-*To be added after publishing the final build-in-public post.*
+[View my Build-in-Public post on LinkedIn](https://www.linkedin.com/posts/amina-maqsood09_github-amina-maqsood09portfolio-personal-activity-7500222455697829888-gKqR)
 
 ### ✅ Final Review
 
