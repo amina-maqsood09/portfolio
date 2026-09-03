@@ -212,6 +212,16 @@ When I look back at Week 1, I mainly wanted to learn AI. By the end of the track
 ### 📢 Build-in-Public Post
 
 [View my Build-in-Public post on LinkedIn](https://www.linkedin.com/posts/amina-maqsood09_github-amina-maqsood09portfolio-personal-activity-7500222455697829888-gKqR)
+## Built with AI
+
+This portfolio's dark/light theming system, the diagnosis and fix of a broken
+Tailwind v4 `@theme` configuration (which was silently breaking most color
+utility classes site-wide), a duplicate-content bug fix, cross-platform
+(Windows) dependency install issues, and this README were built with Claude
+(Anthropic). When a fix didn't visibly work, I pushed back and asked Claude to
+prove it — it rendered the built site with Playwright, inspected the actual
+computed CSS and DOM, and only then reported the fix as verified, instead of
+me just trusting the diff.
 
 ### ✅ Final Review
 
