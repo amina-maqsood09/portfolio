@@ -19,58 +19,69 @@ const fadeUp: Variants = {
 
 const featuredProjects = [
   {
-    title: "Modern Image Gallery",
-    description: "CSS Grid layout with category-based filtering, lightbox viewer, keyboard navigation, and smooth scroll animations.",
-    gradient: "from-green-950 via-stone-900 to-stone-800",
-    symbol: "[ ]",
-    tags: ["JavaScript", "CSS Grid", "HTML"],
-    demoLink: "https://github.com/amina-maqsood09",
-    githubLink: "https://github.com/amina-maqsood09",
-  },
-  {
     title: "Portfolio Website v1",
-    description: "Responsive personal portfolio with scroll-triggered animations and a spinning ring photo effect — live on GitHub Pages.",
+    description:
+      "Responsive personal portfolio with scroll-triggered animations and a spinning ring photo effect — live on GitHub Pages.",
     gradient: "from-stone-900 via-green-950 to-stone-800",
     symbol: "< />",
     tags: ["HTML", "CSS", "JavaScript"],
-    demoLink: "https://amina-maqsood09.github.io/portfolio",
+    demoLink: "https://aminamaqsood-dev.vercel.app/",
     githubLink: "https://github.com/amina-maqsood09/portfolio",
   },
+
+  {
+    title: "UXLens AI",
+    description:
+      "AI-powered UX reviewer that analyzes any live website, flags usability and accessibility issues, and generates actionable design improvement recommendations using computer vision and the Gemini API.",
+    gradient: "from-green-950 via-green-900 to-stone-900",
+    symbol: "UX",
+    tags: ["React", "Node.js", "Puppeteer", "Gemini API"],
+    demoLink: "https://uxlens-ai-server.vercel.app/",
+    githubLink: "https://github.com/amina-maqsood09/uxlens-ai",
+  },
+
+  {
+    title: "FluentBuddy AI",
+    description:
+      "An AI-powered English learning companion with conversational practice, instant feedback, and progress tracking, built with the Gemini API and Firebase.",
+    gradient: "from-stone-900 via-green-950 to-green-900",
+    symbol: "EN",
+    tags: ["React", "TypeScript", "Firebase", "Gemini API"],
+    demoLink: "https://fluentbuddy-ai.vercel.app",
+    githubLink: "https://github.com/amina-maqsood09/fluentbuddy-ai",
+  },
+
   {
     title: "Ledgerly — SaaS Landing Page",
-    description: "A modern SaaS landing page demo for a fictional accounting platform, featuring animated hero sections, feature grids, pricing tables, and a polished responsive layout.",
+    description:
+      "A modern SaaS landing page demo for a fictional accounting platform, featuring animated hero sections, feature grids, pricing tables, and a polished responsive layout.",
     gradient: "from-green-950 via-stone-900 to-stone-800",
     symbol: "$/",
     tags: ["React", "Tailwind CSS", "Framer Motion"],
     demoLink: "https://github.com/amina-maqsood09/saas-landing-page-demo",
     githubLink: "https://github.com/amina-maqsood09/saas-landing-page-demo",
   },
+
   {
     title: "Product List App",
-    description: "A clean, interactive product listing application with filtering, cart management, and a responsive card-based UI — demonstrating core React state management patterns.",
+    description:
+      "A clean, interactive product listing application with filtering, cart management, and a responsive card-based UI — demonstrating core React state management patterns.",
     gradient: "from-stone-800 via-stone-900 to-green-950",
     symbol: "[ * ]",
     tags: ["React", "JavaScript", "CSS"],
     demoLink: "https://github.com/amina-maqsood09/product-list-app",
     githubLink: "https://github.com/amina-maqsood09/product-list-app",
   },
+
   {
-    title: "UXLens AI",
-    description: "AI-powered UX reviewer that analyzes any live website, flags usability and accessibility issues, and generates actionable design improvement recommendations using computer vision and the Gemini API.",
-    gradient: "from-green-950 via-green-900 to-stone-900",
-    symbol: "UX",
-    tags: ["React", "Node.js", "Puppeteer", "Gemini API"],
-    demoLink: "https://uxlens-ai-server.vercel.app",
-    githubLink: "https://github.com/amina-maqsood09/uxlens-ai",
-  },
-  {
-    title: "FluentBuddy AI",
-    description: "An AI-powered English learning companion with conversational practice, instant feedback, and progress tracking, built with the Gemini API and Firebase.",
-    gradient: "from-stone-900 via-green-950 to-green-900",
-    symbol: "EN",
-    tags: ["React", "TypeScript", "Firebase", "Gemini API"],
-    demoLink: "https://fluentbuddy-ai.vercel.app",
-    githubLink: "https://github.com/amina-maqsood09/fluentbuddy-ai",
+    title: "Modern Image Gallery",
+    description:
+      "CSS Grid layout with category-based filtering, lightbox viewer, keyboard navigation, and smooth scroll animations.",
+    gradient: "from-green-950 via-stone-900 to-stone-800",
+    symbol: "[ ]",
+    tags: ["JavaScript", "CSS Grid", "HTML"],
+    demoLink: "https://github.com/amina-maqsood09",
+    githubLink: "https://github.com/amina-maqsood09",
   },
 ];
 

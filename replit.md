@@ -1,45 +1,100 @@
-# [Project name]
+# Amina Maqsood — Portfolio
 
-_Replace the heading above with the project's name, and this line with one sentence describing what this app does for users._
+A personal developer portfolio built to showcase frontend + AI engineering work —
+live projects, internship experience, and a technical skill breakdown, presented
+through a dark-mode-first, black-and-green interface with a custom 3D hero scene.
 
-## Run & Operate
+**Who it's for:** recruiters, startups, and clients evaluating me for frontend/AI
+engineering roles or freelance work.
 
-- `pnpm --filter @workspace/api-server run dev` — run the API server (port 5000)
-- `pnpm run typecheck` — full typecheck across all packages
-- `pnpm run build` — typecheck + build all packages
-- `pnpm --filter @workspace/api-spec run codegen` — regenerate API hooks and Zod schemas from the OpenAPI spec
-- `pnpm --filter @workspace/db run push` — push DB schema changes (dev only)
-- Required env: `DATABASE_URL` — Postgres connection string
+**Live site:** https://aminamaqsood-dev.vercel.app
 
-## Stack
+## What it does
 
-- pnpm workspaces, Node.js 24, TypeScript 5.9
-- API: Express 5
-- DB: PostgreSQL + Drizzle ORM
-- Validation: Zod (`zod/v4`), `drizzle-zod`
-- API codegen: Orval (from OpenAPI spec)
-- Build: esbuild (CJS bundle)
+- Single-page portfolio: About, Experience, Projects, Services, Skills, Education,
+  Contact.
+- Interactive 3D hero visual (React Three Fiber) that reacts to the cursor.
+- Working contact form (EmailJS) — messages land directly in my inbox, no backend
+  needed.
+- Full dark/light theme system with a persisted user preference.
+- Fully responsive (mobile through desktop).
 
-## Where things live
+## Setup a stranger could follow
 
-_Populate as you build — short repo map plus pointers to the source-of-truth file for DB schema, API contracts, theme files, etc._
+```bash
+git clone https://github.com/amina-maqsood09/portfolio.git
+cd portfolio
+pnpm install
+pnpm --filter @workspace/portfolio run dev
+```
 
-## Architecture decisions
+Open the printed `localhost` URL. That's it — no environment variables or backend
+service are required to run the site locally (the contact form uses EmailJS's
+client-side SDK with a public key already in the source).
 
-_Populate as you build — non-obvious choices a reader couldn't infer from the code (3-5 bullets)._
+**Build for production:**
+```bash
+pnpm --filter @workspace/portfolio run build
+```
 
-## Product
+## Usage examples
 
-_Describe the high-level user-facing capabilities of this app once they exist._
+- **View a project:** scroll to or click "Projects" in the nav — each card links
+  out to a live demo and/or source repo.
+- **Toggle theme:** the sun/moon icon in the top-right of the navbar.
+- **Contact:** fill in the form in the Contact section, or use the WhatsApp/email
+  links directly.
 
-## User preferences
+## Architecture (high level)
 
-_Populate as you build — explicit user instructions worth remembering across sessions._
+```
+React (Vite, TypeScript)
+  ├─ Tailwind CSS v4  → design tokens in src/index.css (@theme + light/dark
+  │                     CSS custom properties)
+  ├─ Framer Motion    → scroll-reveal + micro-interactions
+  ├─ React Three Fiber / drei / three → Hero3DScene.tsx (cursor-reactive 3D shapes)
+  ├─ shadcn/ui         → base primitives (dialogs, tooltips, etc.)
+  ├─ EmailJS           → contact form delivery, no backend
+  └─ Vercel            → hosting + auto-deploy on push to main, + @vercel/analytics
+```
 
-## Gotchas
+Each page section is its own component in `src/components/` (`Hero.tsx`,
+`About.tsx`, `Experience.tsx`, `Projects.tsx`, `Services.tsx`, `Skills.tsx`,
+`Education.tsx`, `Contact.tsx`), composed in `src/pages/Home.tsx`.
 
-_Populate as you build — sharp edges, "always run X before Y" rules._
+## Eval results (v2)
 
-## Pointers
+Lighthouse scores from the production build, incognito run (mobile, no extension
+interference):
 
-- See the `pnpm-workspace` skill for workspace structure, TypeScript setup, and package details
+| Metric | Score |
+|---|---|
+| Performance | 57 |
+| Accessibility | 84 |
+| Best Practices | 100 |
+| SEO | 100 |
+
+Manual checks done: dark/light contrast pass (WCAG AA, 4.5:1 target) on all
+text/background pairs; build verified with `tsc --noEmit` (no type errors) and
+a clean production `vite build`.
+
+## Limitations
+
+- No backend/CMS — content (projects, experience, skills) is hardcoded in each
+  component, so updates require a code change and redeploy rather than a CMS edit.
+- The contact form has no server-side spam protection beyond EmailJS's own
+  domain restriction — a bot could still hit the public key directly.
+- The 3D hero scene adds real bundle weight (~230KB gzipped, lazy-loaded) and
+  isn't optimized for low-end mobile devices — it renders a static/simplified
+  view on small viewports rather than degrading gracefully by device power.
+
+## Built with AI
+
+This portfolio's dark/light theming system, the diagnosis and fix of a broken
+Tailwind v4 `@theme` configuration (which was silently breaking most color
+utility classes site-wide), a duplicate-content bug fix, cross-platform
+(Windows) dependency install issues, and this README were built with Claude
+(Anthropic). When a fix didn't visibly work, I pushed back and asked Claude to
+prove it — it rendered the built site with Playwright, inspected the actual
+computed CSS and DOM, and only then reported the fix as verified, instead of
+me just trusting the diff.
